@@ -106,6 +106,12 @@ After completing this exercise, ask yourself:
 
 Once you've completed this exercise, you're ready to move on to the next challenge where you'll learn how to **customize your greeting with your own name**. But first, take a moment to celebrate—you've written and run your first Java program! 🎉
 
+## Useful prompts
+- Why do Java programs have .java and .class files?
+- What is Java Virtual Machine (JVM)?
+- How does Java achieve platform independence?
+- What is Java bytecode?
+
 ## Read More
 
 - [Oracle Java Tutorial: Your First Cup of Java](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/)

@@ -13,6 +13,6 @@ public class HelloJava {
     public static void main(String[] args) {
         // TODO: Print "Hello, Java World!" using System.out.println()
         // Hint: System.out.println() prints text to the console followed by a new line
-        System.out.println("Hello, Java World!");
+        System.out.println("");
     }
 }
