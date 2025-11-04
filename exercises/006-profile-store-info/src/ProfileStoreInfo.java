@@ -15,11 +15,6 @@ public class ProfileStoreInfo {
         int age = 30;
         boolean isStudent = false;
 
-        System.out.printf("Name: %s%n", name);
-        System.out.printf("Age: %d%n", age);
-        System.out.printf("Email: %s%n", email);
-        System.out.printf("Student: %b", isStudent);
-
         // TODO: Create an int variable called 'age' and assign it your age
         // TODO: Create a String variable called 'email' and assign it your email
         // TODO: Create a boolean variable called 'isStudent' (true or false)
