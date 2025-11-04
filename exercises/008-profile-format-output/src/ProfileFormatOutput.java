@@ -42,14 +42,17 @@ public class ProfileFormatOutput {
             // Student:  Yes
             // ================================
 
-            System.out.printf("        PROFILE CARD%n");
-            System.out.printf(" ================================ %n");
-            System.out.printf(" Name:     %s%n", name);
-            System.out.printf(" Age:      %d years%n", age);
-            System.out.printf(" Email:    %s%n", email);
-            System.out.printf(" City:     %s%n", city);
-            System.out.printf(" Student:  %b%n", isStudent);
-            System.out.printf(" ================================ %n");
+            /*
+            * Reminder about format specifiers:
+            * %s - String
+            * %d - Integer
+            * %b - Boolean
+            * \n - New line
+            * \t - Tab
+            * ======================== - Line of equal signs
+             */
+
+            
         }
     }
 }
