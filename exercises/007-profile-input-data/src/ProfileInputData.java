@@ -13,18 +13,17 @@ public class ProfileInputData {
         try (Scanner scanner = new Scanner(System.in)) {
 
             System.out.print("Enter your name: ");
-            String name = /* TODO: Ask for and read the user's age */
-
-            System.out.print("Enter your email: ");
-            String email = /* TODO: Ask for and read the user's email */
+            String name = /* TODO */
 
             System.out.print("Enter your age: ");
-            int age = /* TODO: Ask for and read the user's age */
+            int age = scanner.nextInt();
+            /* TODO */ // Clear the buffer after reading int
 
-            // TODO: After reading an int, clear the buffer if necessary
+            System.out.print("Enter your email: ");
+            String email = /* TODO */
 
             System.out.print("Are you a student (true/false): ");
-            boolean isStudent = /* TODO: Ask for and read the user's student status */;
+            boolean isStudent = scanner.nextBoolean();
 
             System.out.println("--- Profile Summary ---");
             System.out.println("Name: " + name);
@@ -34,4 +33,3 @@ public class ProfileInputData {
         }
     }
 }
-w

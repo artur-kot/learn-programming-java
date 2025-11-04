@@ -84,37 +84,6 @@ boolean isStudent = scanner.nextBoolean();
 
 </details>
 
-<details>
-<summary>Hint 4: Complete Flow</summary>
-
-```
-Scanner scanner = new Scanner(System.in);
-
-System.out.print("Enter your name: ");
-String name = scanner.nextLine();
-
-System.out.print("Enter your age: ");
-int age = scanner.nextInt();
-scanner.nextLine(); // Clear buffer
-
-System.out.print("Enter your email: ");
-String email = scanner.nextLine();
-
-System.out.print("Are you a student? (true/false): ");
-boolean isStudent = scanner.nextBoolean();
-
-// Print summary
-System.out.println("\n--- Profile Summary ---");
-System.out.println("Name: " + name);
-System.out.println("Age: " + age);
-System.out.println("Email: " + email);
-System.out.println("Student: " + isStudent);
-
-scanner.close();
-```
-
-</details>
-
 ## Expected Behavior
 
 When you run your program, it should look like:
