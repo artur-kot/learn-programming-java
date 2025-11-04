@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 /**
@@ -9,18 +10,28 @@ import java.util.Scanner;
 public class ProfileInputData {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        // TODO: Ask for and read the user's name
-        System.out.print("Enter your name: ");
+            System.out.print("Enter your name: ");
+            String name = /* TODO: Ask for and read the user's age */
 
-        // TODO: Ask for and read the user's age
-        // Hint: Use scanner.nextInt() for integers
-        // TODO: Ask for and read the user's email
-        // Hint: After nextInt(), you may need to call scanner.nextLine() to clear the buffer
-        // TODO: Ask if they are a student (true/false)
-        // Hint: Use scanner.nextBoolean() for boolean values
-        // TODO: Print a summary of all the information collected
-        scanner.close();
+            System.out.print("Enter your email: ");
+            String email = /* TODO: Ask for and read the user's email */
+
+            System.out.print("Enter your age: ");
+            int age = /* TODO: Ask for and read the user's age */
+
+            // TODO: After reading an int, clear the buffer if necessary
+
+            System.out.print("Are you a student (true/false): ");
+            boolean isStudent = /* TODO: Ask for and read the user's student status */;
+
+            System.out.println("--- Profile Summary ---");
+            System.out.println("Name: " + name);
+            System.out.println("Email: " + email);
+            System.out.println("Age: " + age);
+            System.out.println("Student: " + isStudent);
+        }
     }
 }
+w

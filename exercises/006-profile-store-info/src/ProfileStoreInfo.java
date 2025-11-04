@@ -24,5 +24,6 @@ public class ProfileStoreInfo {
         // Age: 25
         // Email: alice@example.com
         // Student: true
+
     }
 }
