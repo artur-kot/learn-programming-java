@@ -1,0 +1,10 @@
+{
+  "title": "Hello Java! - Print Your First Message",
+  "description": "Learn to print messages to the console using System.out.println() and understand the main method entry point",
+  "difficulty": "beginner",
+  "concepts": ["printing", "System.out.println()", "strings", "main method"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/HelloJava.java", "test/HelloJavaTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}
