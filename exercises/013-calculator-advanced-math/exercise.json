@@ -1,0 +1,10 @@
+{
+  "title": "Calculator - Advanced Math",
+  "description": "Learn the Math library and implement modulo, power, and square root operations",
+  "difficulty": "beginner",
+  "concepts": ["Math library", "modulo operator", "Math.pow()", "Math.sqrt()", "advanced operations", "edge cases"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/CalculatorAdvancedMath.java", "test/CalculatorAdvancedMathTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

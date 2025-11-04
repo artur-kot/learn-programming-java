@@ -56,7 +56,7 @@ Create variables for name, age, and email.
 ### **Series 3: Simple Calculator**
 
 *Learn arithmetic, math functions, and user input.*
-11. - [ ] **Calculator - Basic Operations**
+11. - [x] **Calculator - Basic Operations**
 Add, subtract, multiply, divide.
 **Concepts:** arithmetic, numeric types.
 

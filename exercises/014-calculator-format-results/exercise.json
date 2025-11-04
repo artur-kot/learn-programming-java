@@ -1,0 +1,10 @@
+{
+  "title": "Calculator - Format Results",
+  "description": "Learn rounding and decimal formatting to display polished calculator results",
+  "difficulty": "beginner",
+  "concepts": ["Math.round()", "String.format()", "decimal formatting", "printf()", "rounding precision"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/CalculatorFormatResults.java", "test/CalculatorFormatResultsTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

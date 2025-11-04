@@ -1,0 +1,10 @@
+{
+  "title": "Calculator - User Input",
+  "description": "Learn Scanner input and create an interactive calculator that accepts user numbers",
+  "difficulty": "beginner",
+  "concepts": ["Scanner class", "nextInt() and nextDouble()", "user input/output", "prompts", "code reuse"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/CalculatorUserInput.java", "test/CalculatorUserInputTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}
