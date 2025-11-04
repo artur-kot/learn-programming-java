@@ -1,3 +1,5 @@
+progress.db
+
 exercises/**/target/
 exercises/**/out/
 *.class

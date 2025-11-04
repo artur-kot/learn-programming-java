@@ -4,7 +4,7 @@
 
 *Get familiar with printing, compiling, and debugging.*
 
-1. - [ ] **Hello Java! - Print Your First Message**
+1. - [x] **Hello Java! - Print Your First Message**
    Print “Hello, Java World!” to the console.
    **Concepts:** printing, `System.out.println()`, compiling and running.
 
