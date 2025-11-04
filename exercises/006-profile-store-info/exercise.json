@@ -1,0 +1,10 @@
+{
+  "title": "Profile - Store Info",
+  "description": "Learn variable declaration and different data types (String, int, boolean) by storing profile information",
+  "difficulty": "beginner",
+  "concepts": ["variable declaration", "data types", "String", "int", "boolean", "type selection"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/ProfileStoreInfo.java", "test/ProfileStoreInfoTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

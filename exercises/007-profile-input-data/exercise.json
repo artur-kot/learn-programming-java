@@ -1,0 +1,10 @@
+{
+  "title": "Profile - Input Data",
+  "description": "Learn to read different data types from user input using Scanner methods like nextInt() and nextBoolean()",
+  "difficulty": "beginner",
+  "concepts": ["Scanner", "nextInt()", "nextBoolean()", "nextLine()", "input parsing", "buffer management"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/ProfileInputData.java", "test/ProfileInputDataTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

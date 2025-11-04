@@ -15,10 +15,10 @@ public class HelloFormatter {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Welcome to the Greeting Formatter!");
             System.out.print("Enter your name: ");
-            String name = scanner.nextLine();
+            String name = scanner./* get string */();
 
             System.out.print("Enter your age: ");
-            int age = scanner.nextInt();
+            int age = scanner./* get integer */();
 
             // TODO: Use printf to print a nicely formatted greeting
             // The greeting should:

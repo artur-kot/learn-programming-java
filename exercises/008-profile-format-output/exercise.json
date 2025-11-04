@@ -1,0 +1,10 @@
+{
+  "title": "Profile - Format Output",
+  "description": "Learn advanced printf formatting with field widths, alignment, and escape sequences to create professional output",
+  "difficulty": "beginner",
+  "concepts": ["printf", "format specifiers", "field width", "alignment", "escape sequences", "formatted output"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/ProfileFormatOutput.java", "test/ProfileFormatOutputTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

@@ -29,23 +29,23 @@
 ### **Series 2: Profile Card App**
 
 *Learn about variables, strings, and data types.*
-6. - [ ] **Profile - Store Info**
+6. - [x] **Profile - Store Info**
 Create variables for name, age, and email.
 **Concepts:** variable declaration, data types.
 
-7. - [ ] **Profile - Input Data**
+7. - [x] **Profile - Input Data**
    Ask the user for their details.
    **Concepts:** `Scanner`, parsing input.
 
-8. - [ ] **Profile - Format Output**
+8. - [x] **Profile - Format Output**
    Display information neatly formatted.
    **Concepts:** `printf`, escape sequences.
 
-9. - [ ] **Profile - Validate Email**
+9. - [x] **Profile - Validate Email**
    Ensure the email contains “@”.
    **Concepts:** `String.contains()`, conditionals.
 
-10. - [ ] **Profile - Clean Input**
+10. - [x] **Profile - Clean Input**
     Trim spaces, adjust capitalization.
     **Concepts:** `trim()`, `toUpperCase()`, `toLowerCase()`.
 
