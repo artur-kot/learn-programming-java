@@ -20,6 +20,10 @@ public class HelloUser {
         // TODO: Read the user's name using scanner.nextLine()
         
         // TODO: Print a personalized greeting using the name they provided
+
+        System.out.println("What is your name?");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
         
         scanner.close();
     }

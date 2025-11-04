@@ -8,19 +8,19 @@
    Print “Hello, Java World!” to the console.
    **Concepts:** printing, `System.out.println()`, compiling and running.
 
-2. - [ ] **Hello You - Personal Greeting**
+2. - [x] **Hello You - Personal Greeting**
    Print a personalized message using your name.
    **Concepts:** strings, concatenation.
 
-3. - [ ] **Hello User - Dynamic Greeting**
+3. - [x] **Hello User - Dynamic Greeting**
    Ask for the user’s name and greet them.
    **Concepts:** `Scanner`, user input.
 
-4. - [ ] **Hello Formatter - Clean Output**
+4. - [x] **Hello Formatter - Clean Output**
    Format your message using `printf`.
    **Concepts:** formatted strings, escape sequences.
 
-5. - [ ] **Hello Debugger - Fix the Errors**
+5. - [x] **Hello Debugger - Fix the Errors**
    Introduce and fix syntax errors.
    **Concepts:** compiler messages, syntax debugging.
 

@@ -1,5 +1,8 @@
 progress.db
+exercises/**/playground/
 
 exercises/**/target/
 exercises/**/out/
 *.class
+
+.idea
