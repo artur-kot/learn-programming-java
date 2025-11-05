@@ -1,0 +1,29 @@
+{
+  "id": "027",
+  "series": 11,
+  "title": "Calculator Refactor - Modular Design & Method Organization",
+  "description": "Refactor a working calculator application from monolithic code into well-organized methods. Learn code organization, method extraction, code reuse, and building a menu-driven application. Transform imperative code into modular, maintainable software.",
+  "difficulty": "beginner-intermediate",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "method extraction",
+    "code organization",
+    "code reuse",
+    "menu-driven design",
+    "modular architecture",
+    "refactoring"
+  ],
+  "learningObjectives": [
+    "Understand code organization principles",
+    "Learn to extract methods from monolithic code",
+    "Practice creating reusable methods for operations",
+    "Build a validation method for input handling",
+    "Design a menu system using methods",
+    "Understand separation of concerns",
+    "Apply DRY (Don't Repeat Yourself) principle",
+    "Transform procedural code into modular design"
+  ],
+  "estimatedTime": "50-60 minutes",
+  "status": "not-started"
+}
