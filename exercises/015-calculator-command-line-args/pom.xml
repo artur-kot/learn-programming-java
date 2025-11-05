@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>015-calculator-division-validation</artifactId>
+    <artifactId>015-calculator-command-line-args</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>015 - Calculator Division Validation</name>
-    <description>Learn input validation and defensive programming to prevent division by zero errors</description>
+    <name>015 - Calculator Command-Line Arguments</name>
+    <description>Learn command-line argument processing and parameter parsing using args[]</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
