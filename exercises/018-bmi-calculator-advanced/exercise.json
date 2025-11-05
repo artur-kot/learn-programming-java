@@ -1,0 +1,27 @@
+{
+  "id": "018",
+  "series": 5,
+  "title": "BMI Calculator - Advanced",
+  "description": "Build on Exercise 017 to add BMI category interpretation and support multiple calculations in one session. Learn about chained conditionals, string comparison, and loop-based menu design.",
+  "difficulty": "intermediate",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "conditional logic (if/else/else if)",
+    "BMI category interpretation",
+    "string comparison",
+    "loop-based menus",
+    "code reuse",
+    "method composition"
+  ],
+  "learningObjectives": [
+    "Apply multiple conditional branches with if/else/else if",
+    "Compare strings with equalsIgnoreCase()",
+    "Reuse code from previous exercises",
+    "Design menu-driven loops",
+    "Compose multiple methods in a program",
+    "Handle boundary values correctly in conditionals"
+  ],
+  "estimatedTime": "45-60 minutes",
+  "status": "not-started"
+}

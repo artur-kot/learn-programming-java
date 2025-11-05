@@ -1,0 +1,26 @@
+{
+  "id": "020",
+  "series": 6,
+  "title": "Age Checker - Advanced",
+  "description": "Build on Exercise 019 to determine age-based permissions using nested conditions and logical operators to check multiple criteria simultaneously.",
+  "difficulty": "intermediate",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "nested conditionals",
+    "logical operators (&&, ||)",
+    "age-based permissions",
+    "complex decision logic",
+    "code reuse from previous exercises"
+  ],
+  "learningObjectives": [
+    "Apply nested if/else statements for complex logic",
+    "Use logical AND (&&) and OR (||) operators",
+    "Combine multiple conditions to make decisions",
+    "Reuse code from Exercise 019",
+    "Model real-world permission systems",
+    "Handle edge cases with multiple criteria"
+  ],
+  "estimatedTime": "45-60 minutes",
+  "status": "not-started"
+}
