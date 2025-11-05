@@ -1,0 +1,27 @@
+{
+  "id": "026",
+  "series": 10,
+  "title": "Method Overloading - Advanced",
+  "description": "Master method overloading by creating multiple methods with the same name but different parameter types and counts. Build flexible, polymorphic code that handles different data types elegantly.",
+  "difficulty": "beginner-intermediate",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "method overloading",
+    "polymorphism",
+    "method signature",
+    "type conversion",
+    "conditional logic"
+  ],
+  "learningObjectives": [
+    "Understand method overloading and when to use it",
+    "Create multiple methods with the same name",
+    "Use different parameter types (int, double, String)",
+    "Use different parameter counts",
+    "Understand how Java determines which method to call",
+    "Build flexible, reusable APIs",
+    "Apply overloading to real-world scenarios (printing, calculations)"
+  ],
+  "estimatedTime": "40-50 minutes",
+  "status": "not-started"
+}

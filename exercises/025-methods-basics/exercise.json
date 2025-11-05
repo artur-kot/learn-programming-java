@@ -1,0 +1,28 @@
+{
+  "id": "025",
+  "series": 10,
+  "title": "Methods Basics - Define, Parameters & Return Values",
+  "description": "Master the fundamentals of methods by defining simple methods, adding parameters to customize behavior, and returning values from methods. Build reusable code building blocks.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "method syntax",
+    "method calls",
+    "parameters",
+    "return types",
+    "return statements",
+    "void methods"
+  ],
+  "learningObjectives": [
+    "Understand method syntax and structure",
+    "Define methods with no parameters",
+    "Call methods from main()",
+    "Add parameters to customize method behavior",
+    "Use return types to send values back to caller",
+    "Understand the difference between void and value-returning methods",
+    "Build reusable code components"
+  ],
+  "estimatedTime": "40-50 minutes",
+  "status": "not-started"
+}
