@@ -1,0 +1,31 @@
+{
+  "id": "028",
+  "series": 12,
+  "title": "Array Basics - Declare, Print & Sum",
+  "description": "Master fundamental array operations by declaring arrays, iterating through elements, printing values, and computing aggregations like sum and average. Build the foundation for working with collections.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "array declaration",
+    "array initialization",
+    "array indexing",
+    "for loops with arrays",
+    "array length",
+    "aggregation",
+    "sum and average",
+    "finding min and max"
+  ],
+  "learningObjectives": [
+    "Declare and initialize arrays",
+    "Access array elements using indices",
+    "Understand array length property",
+    "Iterate through arrays using for loops",
+    "Print array elements",
+    "Calculate sum of array elements",
+    "Calculate average of array elements",
+    "Find minimum and maximum values in array"
+  ],
+  "estimatedTime": "40-50 minutes",
+  "status": "not-started"
+}
