@@ -1,0 +1,24 @@
+{
+  "id": "021",
+  "series": 7,
+  "title": "Counter - Count Up and Down",
+  "description": "Print numbers from 1 to 10, then count down from 10 to 1. Learn loop syntax and how to modify loop behavior.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "for loops",
+    "loop iteration",
+    "loop modification",
+    "increment and decrement operators"
+  ],
+  "learningObjectives": [
+    "Understand how for loops work",
+    "Learn loop syntax: for (init; condition; increment)",
+    "Use loops to automate repetitive tasks",
+    "Learn loop counters and modification",
+    "Understand increment (++) and decrement (--) operators"
+  ],
+  "estimatedTime": "20-30 minutes",
+  "status": "not-started"
+}

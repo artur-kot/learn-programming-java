@@ -1,0 +1,24 @@
+{
+  "id": "022",
+  "series": 7,
+  "title": "Counter - Sum Range",
+  "description": "Calculate the sum of numbers from 1 to N. Learn about accumulators and how to track values across loop iterations.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "for loops",
+    "accumulators",
+    "variables",
+    "user input"
+  ],
+  "learningObjectives": [
+    "Understand accumulator pattern",
+    "Combine loop iteration with variable accumulation",
+    "Use variables to track state during loops",
+    "Accept user input for dynamic range",
+    "Apply knowledge from Exercise 021"
+  ],
+  "estimatedTime": "20-30 minutes",
+  "status": "not-started"
+}

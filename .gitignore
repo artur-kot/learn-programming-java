@@ -6,3 +6,8 @@ exercises/**/out/
 *.class
 
 .idea
+.vscode
+.DS_Store
+*.log
+*.tmp
+*.backup
