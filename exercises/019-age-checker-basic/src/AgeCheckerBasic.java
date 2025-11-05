@@ -23,9 +23,12 @@ public class AgeCheckerBasic {
             // - Teenager: "Recommendation: Explore interests and prepare for adulthood!"
             // - Adult: "Recommendation: Time to build your career and independence!"
             // - Senior: "Recommendation: Enjoy your well-earned rest and retirement!"
+
             // BONUS: Try implementing this same logic using a switch statement instead!
             // Switch statements provide an alternative way to check multiple values.
-            // Hint: You might need to divide age into ranges first or use pattern matching.
+            // Hint: You might need to divide age into ranges first or use IntStreams.
+            // Search internet, use AI for guidance.
+            
         }
     }
 }

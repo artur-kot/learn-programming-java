@@ -6,6 +6,17 @@ Extend Exercise 019 to check age-based permissions for various activities. This 
 
 ## What You're Learning
 
+- **Do-While Loops** execute at least once before checking a condition. This is useful for user input validation or menu-driven programs:
+
+```java
+do {
+  System.out.println("Enter your age: ");
+  age = scanner.nextInt();
+} while (age < 0 || age > 150); // Keeps asking until valid
+```
+
+Unlike a regular while loop, a do-while loop guarantees the code runs at least one time, making it perfect for "Check another person?" prompts where you want to ask first, then decide whether to repeat.
+
 **Nested Conditionals** place if/else statements inside other if/else blocks. This lets you make more complex decisions that consider multiple related factors:
 
 ```java

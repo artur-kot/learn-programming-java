@@ -105,11 +105,11 @@ Build a comprehensive temperature converter supporting Celsius â†” Fahrenheit â†
 ### **Series 6: Age Checker App**
 
 *Explore branching and boolean logic.*
-19. - [ ] **Age Checker - Basic**
+19. - [x] **Age Checker - Basic**
 Check user's age against different thresholds and provide appropriate messages using if/else if statements and input validation.
 **Concepts:** relational operators, chained conditions, input validation.
 
-20. - [ ] **Age Checker - Advanced**
+20. - [x] **Age Checker - Advanced**
     Determine age-based permissions using nested conditions and logical operators to check multiple criteria simultaneously.
     **Concepts:** nested conditionals, logical operators.
 
