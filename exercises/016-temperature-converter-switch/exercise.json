@@ -1,0 +1,27 @@
+{
+  "id": "016",
+  "series": 4,
+  "title": "Temperature Converter",
+  "description": "Learn switch statements, temperature conversion formulas, and menu-driven program design. Implement a comprehensive temperature converter that supports conversions between Celsius, Fahrenheit, and Kelvin using switch statements for menu routing.",
+  "difficulty": "intermediate",
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "topics": [
+    "switch statements",
+    "temperature conversion formulas",
+    "menu-driven design",
+    "input validation",
+    "loops",
+    "double precision arithmetic"
+  ],
+  "learningObjectives": [
+    "Use switch statements for menu-based routing",
+    "Implement temperature conversion formulas",
+    "Design menu-driven applications",
+    "Handle user input validation",
+    "Work with floating-point arithmetic",
+    "Apply break statements correctly in switch blocks"
+  ],
+  "estimatedTime": "60-90 minutes",
+  "status": "not-started"
+}

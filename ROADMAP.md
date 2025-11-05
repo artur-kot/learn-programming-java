@@ -68,11 +68,11 @@ Add, subtract, multiply, divide.
     Add modulo, power, and square root.
     **Concepts:** `Math` library, operators.
 
-14. - [ ] **Calculator - Input Validation**
+14. - [x] **Calculator - Input Validation**
     Handle invalid input with try...catch blocks.
     **Concepts:** try/catch, `NumberFormatException`, loops.
 
-15. - [ ] **Calculator - Command-Line Arguments**
+15. - [x] **Calculator - Command-Line Arguments**
     Read numbers and operation from command-line.
     **Concepts:** args[], `Integer.parseInt()`, `Double.parseDouble()`.
 
@@ -80,37 +80,25 @@ Add, subtract, multiply, divide.
 
 ### **Series 4: Temperature Converter**
 
-*Apply numeric operations and branching logic.*
-16. - [ ] **Temp - Celsius to Fahrenheit**
-Use the formula `(C * 9/5) + 32`.
-**Concepts:** math expressions.
-
-17. - [ ] **Temp - Fahrenheit to Celsius**
-    Reverse conversion.
-    **Concepts:** arithmetic, reusability.
-
-18. - [ ] **Temp - Input Validation**
-    Handle invalid numeric input.
-    **Concepts:** try/catch, defensive input.
-
-19. - [ ] **Temp - Conversion Menu**
-    Let user choose direction.
-    **Concepts:** switch statements.
+*Learn switch statements and menu-driven design with real-world formulas.*
+16. - [ ] **Temperature Converter - Switch Statements**
+Build a comprehensive temperature converter supporting Celsius ↔ Fahrenheit ↔ Kelvin conversions using switch statements for menu routing.
+**Concepts:** switch statements, temperature formulas, menu-driven design, input validation, floating-point arithmetic.
 
 ---
 
 ### **Series 5: BMI Calculator**
 
 *Combine math, input, and conditions.*
-20. - [ ] **BMI - Get Weight and Height**
+17. - [ ] **BMI - Get Weight and Height**
 Input user weight and height.
 **Concepts:** input, double parsing.
 
-21. - [ ] **BMI - Compute BMI**
+18. - [ ] **BMI - Compute BMI**
     Apply the formula and display value.
     **Concepts:** math expressions.
 
-22. - [ ] **BMI - Interpret BMI**
+19. - [ ] **BMI - Interpret BMI**
     Classify results (underweight, normal, overweight).
     **Concepts:** if/else logic.
 
@@ -121,19 +109,19 @@ Input user weight and height.
 ### **Series 6: Age Checker App**
 
 *Explore branching and boolean logic.*
-23. - [ ] **Age Checker - If Statement**
+20. - [ ] **Age Checker - If Statement**
 Check if user is 18 or older.
 **Concepts:** relational operators.
 
-24. - [ ] **Age Checker - Else If Ladder**
+21. - [ ] **Age Checker - Else If Ladder**
     Multiple age categories.
     **Concepts:** chained conditions.
 
-25. - [ ] **Age Checker - Nested Conditions**
+22. - [ ] **Age Checker - Nested Conditions**
     Age-based permissions (drive, vote).
     **Concepts:** logical operators.
 
-26. - [ ] **Age Checker - Validation**
+23. - [ ] **Age Checker - Validation**
     Handle invalid ages (<0, >120).
     **Concepts:** input validation.
 
@@ -142,15 +130,15 @@ Check if user is 18 or older.
 ### **Series 7: Grade Evaluator**
 
 *Map numeric ranges to categories.*
-27. - [ ] **Grades - Numeric to Letter**
+24. - [ ] **Grades - Numeric to Letter**
 Convert score to A–F.
 **Concepts:** range checks.
 
-28. - [ ] **Grades - Pass or Fail**
+25. - [ ] **Grades - Pass or Fail**
     Add status messages.
     **Concepts:** compound logic.
 
-29. - [ ] **Grades - Input Validation**
+26. - [ ] **Grades - Input Validation**
     Ensure value is between 0–100.
     **Concepts:** bounds checking.
 
@@ -161,19 +149,19 @@ Convert score to A–F.
 ### **Series 8: Counting App**
 
 *Automate repetitive tasks with loops.*
-30. - [ ] **Counter - Count Up**
+27. - [ ] **Counter - Count Up**
 Print numbers 1–10.
 **Concepts:** for loop.
 
-31. - [ ] **Counter - Count Down**
+28. - [ ] **Counter - Count Down**
     Reverse from 10 to 1.
     **Concepts:** decrement loop.
 
-32. - [ ] **Counter - Even Numbers**
+29. - [ ] **Counter - Even Numbers**
     Print only evens.
     **Concepts:** modulo operator.
 
-33. - [ ] **Counter - Sum Range**
+30. - [ ] **Counter - Sum Range**
     Sum all numbers up to N.
     **Concepts:** accumulators, variables.
 
@@ -182,11 +170,11 @@ Print numbers 1–10.
 ### **Series 9: Multiplication Table**
 
 *Practice nested loops.*
-34. - [ ] **Table - Single Number**
+31. - [ ] **Table - Single Number**
 Print multiplication table for N.
 **Concepts:** simple loop.
 
-35. - [ ] **Table - Full 1–10 Grid**
+32. - [ ] **Table - Full 1–10 Grid**
     Print complete multiplication table.
     **Concepts:** nested loops.
 
@@ -195,23 +183,23 @@ Print multiplication table for N.
 ### **Series 10: Guessing Game**
 
 *Combine loops, random numbers, and logic.*
-36. - [ ] **Guess - Generate Random Number**
+33. - [ ] **Guess - Generate Random Number**
 Pick a number 1–100.
 **Concepts:** `Random` class.
 
-37. - [ ] **Guess - User Guesses**
+34. - [ ] **Guess - User Guesses**
     Prompt until correct.
     **Concepts:** while loop.
 
-38. - [ ] **Guess - Hints**
-    Show “too high” or “too low.”
+35. - [ ] **Guess - Hints**
+    Show "too high" or "too low."
     **Concepts:** conditional feedback.
 
-39. - [ ] **Guess - Track Attempts**
+36. - [ ] **Guess - Track Attempts**
     Count user guesses.
     **Concepts:** counters, loop control.
 
-40. - [ ] **Guess - Play Again Option**
+37. - [ ] **Guess - Play Again Option**
     Ask if the user wants another round.
     **Concepts:** nested loops, user choices.
 
@@ -222,19 +210,19 @@ Pick a number 1–100.
 ### **Series 11: Methods Basics**
 
 *Structure reusable logic.*
-41. - [ ] **Methods - Define a Simple Method**
+38. - [ ] **Methods - Define a Simple Method**
 Create a greeting method.
 **Concepts:** method syntax, calling methods.
 
-42. - [ ] **Methods - Parameters**
+39. - [ ] **Methods - Parameters**
     Add parameters to customize output.
     **Concepts:** arguments, parameters.
 
-43. - [ ] **Methods - Return Values**
+40. - [ ] **Methods - Return Values**
     Return results from a method.
     **Concepts:** return types.
 
-44. - [ ] **Methods - Method Overloading**
+41. - [ ] **Methods - Method Overloading**
     Define two methods with same name.
     **Concepts:** overloading.
 
@@ -243,15 +231,15 @@ Create a greeting method.
 ### **Series 12: Calculator Refactor**
 
 *Refactor to use methods.*
-45. - [ ] **Calc Refactor - Operations as Methods**
+42. - [ ] **Calc Refactor - Operations as Methods**
 Move add, subtract, multiply, divide into separate methods.
 **Concepts:** modular design.
 
-46. - [ ] **Calc Refactor - Validation Method**
+43. - [ ] **Calc Refactor - Validation Method**
     Reuse validation logic.
     **Concepts:** code reuse.
 
-47. - [ ] **Calc Refactor - Menu System**
+44. - [ ] **Calc Refactor - Menu System**
     Organize program via user menu.
     **Concepts:** method-based flow control.
 
@@ -262,15 +250,15 @@ Move add, subtract, multiply, divide into separate methods.
 ### **Series 13: Arrays Basics**
 
 *Store multiple items together.*
-48. - [ ] **Array - Declare and Print**
+45. - [ ] **Array - Declare and Print**
 Create an array of numbers.
 **Concepts:** indexing, iteration.
 
-49. - [ ] **Array - Sum and Average**
+46. - [ ] **Array - Sum and Average**
     Compute total and average.
     **Concepts:** for loops, aggregation.
 
-50. - [ ] **Array - Find Max/Min**
+47. - [ ] **Array - Find Max/Min**
     Search for extreme values.
     **Concepts:** comparison logic.
 
@@ -279,19 +267,19 @@ Create an array of numbers.
 ### **Series 14: Working with Strings**
 
 *Use arrays and loops to manipulate text.*
-51. - [ ] **String Array - Store Words**
+48. - [ ] **String Array - Store Words**
 Store several words and print them.
 **Concepts:** array of strings.
 
-52. - [ ] **String Tools - Count Characters**
+49. - [ ] **String Tools - Count Characters**
     Count letters in a word.
     **Concepts:** loops, length property.
 
-53. - [ ] **String Tools - Reverse Text**
+50. - [ ] **String Tools - Reverse Text**
     Reverse a word manually.
     **Concepts:** array indexing, loops.
 
-54. - [ ] **String Tools - Palindrome Checker**
+51. - [ ] **String Tools - Palindrome Checker**
     Check if a string reads the same backwards.
     **Concepts:** conditionals, loops.
 
@@ -300,19 +288,19 @@ Store several words and print them.
 ### **Series 15: ArrayList and Collections**
 
 *Work with dynamic lists.*
-55. - [ ] **List - Create and Add Items**
+52. - [ ] **List - Create and Add Items**
 Use `ArrayList` to store integers.
 **Concepts:** generics, list API.
 
-56. - [ ] **List - Remove and Search**
+53. - [ ] **List - Remove and Search**
     Implement delete and find operations.
     **Concepts:** iteration, comparison.
 
-57. - [ ] **List - Sort Items**
+54. - [ ] **List - Sort Items**
     Sort using `Collections.sort()`.
     **Concepts:** utility classes, algorithms.
 
-58. - [ ] **List - Combine Two Lists**
+55. - [ ] **List - Combine Two Lists**
     Merge two lists into one.
     **Concepts:** iteration, data merging.
 
@@ -323,23 +311,23 @@ Use `ArrayList` to store integers.
 ### **Series 16: To-Do List App**
 
 *Combine collections and loops.*
-59. - [ ] **To-Do - Add Task**
+56. - [ ] **To-Do - Add Task**
 Add new task to list.
 **Concepts:** list operations.
 
-60. - [ ] **To-Do - View Tasks**
+57. - [ ] **To-Do - View Tasks**
     Print all tasks with numbering.
     **Concepts:** indexed output.
 
-61. - [ ] **To-Do - Remove Task**
+58. - [ ] **To-Do - Remove Task**
     Delete by index.
     **Concepts:** input parsing, validation.
 
-62. - [ ] **To-Do - Complete Task**
+59. - [ ] **To-Do - Complete Task**
     Mark tasks as done.
     **Concepts:** conditional updates.
 
-63. - [ ] **To-Do - Menu Driven App**
+60. - [ ] **To-Do - Menu Driven App**
     Build full interactive menu.
     **Concepts:** program structure, loops.
 
@@ -348,23 +336,23 @@ Add new task to list.
 ### **Series 17: Expense Tracker**
 
 *Work with numeric data and lists.*
-64. - [ ] **Expenses - Add Record**
+61. - [ ] **Expenses - Add Record**
 Input amount and category.
 **Concepts:** lists, data grouping.
 
-65. - [ ] **Expenses - Show Total**
+62. - [ ] **Expenses - Show Total**
     Sum all expenses.
     **Concepts:** aggregation, iteration.
 
-66. - [ ] **Expenses - Filter by Category**
+63. - [ ] **Expenses - Filter by Category**
     Display only selected category.
     **Concepts:** filtering, conditionals.
 
-67. - [ ] **Expenses - Highest Expense**
+64. - [ ] **Expenses - Highest Expense**
     Find largest value.
     **Concepts:** comparisons, iteration.
 
-68. - [ ] **Expenses - Save Session Summary**
+65. - [ ] **Expenses - Save Session Summary**
     Display a summary report.
     **Concepts:** data formatting, presentation.
 
@@ -375,19 +363,19 @@ Input amount and category.
 ### **Series 18: Classes and Objects**
 
 *Understand OOP fundamentals.*
-69. - [ ] **Class - Define a User Class**
+66. - [ ] **Class - Define a User Class**
 Add fields for name and age.
 **Concepts:** classes, fields.
 
-70. - [ ] **Class - Add Constructor**
+67. - [ ] **Class - Add Constructor**
     Initialize fields at creation.
     **Concepts:** constructors, `this`.
 
-71. - [ ] **Class - Add Methods**
+68. - [ ] **Class - Add Methods**
     Print and update user info.
     **Concepts:** instance methods.
 
-72. - [ ] **Class - Multiple Objects**
+69. - [ ] **Class - Multiple Objects**
     Create several user instances.
     **Concepts:** arrays of objects.
 
@@ -396,23 +384,23 @@ Add fields for name and age.
 ### **Series 19: Bank Account App**
 
 *Apply encapsulation and logic.*
-73. - [ ] **Bank - Define Account Class**
+70. - [ ] **Bank - Define Account Class**
 Fields: owner, balance.
 **Concepts:** encapsulation, access modifiers.
 
-74. - [ ] **Bank - Deposit and Withdraw**
+71. - [ ] **Bank - Deposit and Withdraw**
     Add methods to change balance.
     **Concepts:** method logic, validation.
 
-75. - [ ] **Bank - Display Details**
+72. - [ ] **Bank - Display Details**
     Print formatted account info.
     **Concepts:** getters, formatting.
 
-76. - [ ] **Bank - Multiple Accounts**
+73. - [ ] **Bank - Multiple Accounts**
     Manage several accounts in a list.
     **Concepts:** collections of objects.
 
-77. - [ ] **Bank - Transfer Funds**
+74. - [ ] **Bank - Transfer Funds**
     Implement transfers between accounts.
     **Concepts:** reference handling, condition checks.
 
@@ -421,15 +409,15 @@ Fields: owner, balance.
 ### **Series 20: Inheritance and Polymorphism**
 
 *Model relationships between objects.*
-78. - [ ] **Shapes - Base Shape Class**
+75. - [ ] **Shapes - Base Shape Class**
 Define abstract `Shape` class.
 **Concepts:** inheritance, abstraction.
 
-79. - [ ] **Shapes - Circle and Rectangle**
+76. - [ ] **Shapes - Circle and Rectangle**
     Extend `Shape` and override area methods.
     **Concepts:** overriding, polymorphism.
 
-80. - [ ] **Shapes - Polymorphic Collection**
+77. - [ ] **Shapes - Polymorphic Collection**
     Store multiple shape types and compute total area.
     **Concepts:** dynamic binding, arrays of base type.
 
@@ -439,11 +427,11 @@ Define abstract `Shape` class.
 
 ### **Series 21: Enums and Constants**
 
-81. - [ ] **Enum - Define Day Enum**
+78. - [ ] **Enum - Define Day Enum**
     Represent days of week.
     **Concepts:** enumerations, switch use.
 
-82. - [ ] **Enum - Use in Program**
+79. - [ ] **Enum - Use in Program**
     Display message based on selected day.
     **Concepts:** switch expressions, enums.
 
@@ -451,15 +439,15 @@ Define abstract `Shape` class.
 
 ### **Series 22: Exception Handling**
 
-83. - [ ] **Exceptions - Divide by Zero**
+80. - [ ] **Exceptions - Divide by Zero**
     Handle `ArithmeticException`.
     **Concepts:** try/catch.
 
-84. - [ ] **Exceptions - Input Errors**
+81. - [ ] **Exceptions - Input Errors**
     Handle invalid `Scanner` input.
     **Concepts:** exception control flow.
 
-85. - [ ] **Exceptions - Custom Exception**
+82. - [ ] **Exceptions - Custom Exception**
     Create and throw a custom error class.
     **Concepts:** subclassing Exception.
 
@@ -468,19 +456,19 @@ Define abstract `Shape` class.
 ### **Series 23: File I/O**
 
 *Read and write to files.*
-86. - [ ] **File - Write Text File**
+83. - [ ] **File - Write Text File**
 Save user data to a file.
 **Concepts:** `FileWriter`, I/O.
 
-87. - [ ] **File - Read Text File**
+84. - [ ] **File - Read Text File**
     Load data from file.
     **Concepts:** `Scanner`, file reading.
 
-88. - [ ] **File - Append Mode**
+85. - [ ] **File - Append Mode**
     Add more data to existing file.
     **Concepts:** file modes, streams.
 
-89. - [ ] **File - Handle Exceptions**
+86. - [ ] **File - Handle Exceptions**
     Wrap file operations in try/catch.
     **Concepts:** resource management.
 
@@ -491,23 +479,23 @@ Save user data to a file.
 ### **Series 24: Student Management System**
 
 *Combine OOP, collections, and file I/O.*
-90. - [ ] **Student - Define Class**
+87. - [ ] **Student - Define Class**
 Fields: id, name, grades list.
 **Concepts:** OOP modeling.
 
-91. - [ ] **Student - Add and Remove Records**
+88. - [ ] **Student - Add and Remove Records**
     Manage students in a list.
     **Concepts:** CRUD operations.
 
-92. - [ ] **Student - Compute Statistics**
+89. - [ ] **Student - Compute Statistics**
     Average and top grade.
     **Concepts:** loops, math.
 
-93. - [ ] **Student - Save and Load**
+90. - [ ] **Student - Save and Load**
     Persist student data to a file.
     **Concepts:** file I/O, serialization.
 
-94. - [ ] **Student - Menu Interface**
+91. - [ ] **Student - Menu Interface**
     Add user menu for operations.
     **Concepts:** control flow, menus.
 
@@ -516,23 +504,23 @@ Fields: id, name, grades list.
 ### **Series 25: Modules and Imports**
 
 *Organize code and use built-in libraries.*
-95. - [ ] **Imports - Using Built-in Classes**
+92. - [ ] **Imports - Using Built-in Classes**
 Import and use `java.util.Scanner`, `java.util.Random`.
 **Concepts:** import statements, package structure.
 
-96. - [ ] **Imports - Math Library**
+93. - [ ] **Imports - Math Library**
     Use `java.lang.Math` for calculations.
     **Concepts:** static imports, library methods.
 
-97. - [ ] **Imports - Collections Framework**
+94. - [ ] **Imports - Collections Framework**
     Import `ArrayList`, `HashMap`, `Collections`.
     **Concepts:** generic imports, utility classes.
 
-98. - [ ] **Imports - Create Custom Package**
+95. - [ ] **Imports - Create Custom Package**
     Organize your own classes into packages.
     **Concepts:** package declaration, access levels.
 
-99. - [ ] **Imports - Use Custom Package**
+96. - [ ] **Imports - Use Custom Package**
     Import and use classes from your package.
     **Concepts:** package visibility, reusability.
 
@@ -541,27 +529,27 @@ Import and use `java.util.Scanner`, `java.util.Random`.
 ### **Series 26: Library Management Console**
 
 *Capstone: multi-class project with user data.*
-100. - [ ] **Library - Book Class**
+97. - [ ] **Library - Book Class**
 Define book attributes.
 **Concepts:** OOP basics.
 
-101. - [ ] **Library - Borrow and Return**
+98. - [ ] **Library - Borrow and Return**
     Track borrowed books.
     **Concepts:** state change, booleans.
 
-102. - [ ] **Library - Library Class**
+99. - [ ] **Library - Library Class**
     Store list of books.
     **Concepts:** collections, iteration.
 
-103. - [ ] **Library - Search Books**
+100. - [ ] **Library - Search Books**
     Search by title or author.
     **Concepts:** filtering, string comparison.
 
-104. - [ ] **Library - Save/Load Inventory**
+101. - [ ] **Library - Save/Load Inventory**
     Persist book data to a file.
     **Concepts:** file I/O, exception handling.
 
-105. - [ ] **Library - Main Program Integration**
+102. - [ ] **Library - Main Program Integration**
      Combine all features into final console program.
      **Concepts:** multi-class design, code organization, project structure.
 
