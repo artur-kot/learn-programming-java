@@ -1,5 +1,5 @@
 /**
- * Exercise 015: Calculator - Command-Line Arguments
+ * Calculator - Command-Line Arguments
  *
  * Your task: Create a calculator that reads two numbers and an operation from command-line arguments.
  *
@@ -10,20 +10,31 @@
  * - Error handling
  * - Conditional logic (if/switch)
  */
+
+// Example usage: java CalculatorCommandLineArgs 10 5 add
+// This would output: "10 + 5 = 15"
+
 public class CalculatorCommandLineArgs {
 
-    // TODO: Implement the add method
-    // Method signature: public static double add(double a, double b)
+    public static double add(double a, double b) {
+        return a + b;
+    }
     
-    // TODO: Implement the subtract method
-    // Method signature: public static double subtract(double a, double b)
-    
-    // TODO: Implement the multiply method
-    // Method signature: public static double multiply(double a, double b)
-    
-    // TODO: Implement the divide method
-    // Method signature: public static double divide(double a, double b)
-    
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
+        if (b == 0) {
+            System.out.println("Error: Division by zero is not allowed.");
+            return Double.NaN;
+        }
+        return a / b;
+    }
 
     public static void main(String[] args) {
         // TODO: Validate that exactly 3 arguments are provided
@@ -48,5 +59,41 @@ public class CalculatorCommandLineArgs {
         
         // TODO: Handle invalid operations by printing:
         // "Error: Unknown operation: [operation]"
+
+        if (args.length != 3) {
+            System.out.println("Error: Expected 3 arguments, got " + args.length);
+            return;
+        }
+        
+        try {
+            // TODO: Parse the first two arguments as doubles
+            // Hint: args[0] is the first argument, args[1] is the second argument
+
+            // Get operation from third argument
+            String operation = args[2];
+            
+            double result;
+            String symbol;
+            
+            switch (operation) {
+                case "add":
+                    result = add(a, b);
+                    symbol = "+";
+                    break;
+                case "subtract":
+                    // ** Write your code here **
+                case "multiply":
+                    // ** Write your code here **
+                case "divide":
+                    // ** Write your code here **
+                default:
+                    System.out.println("Error: Unknown operation: " + operation);
+                    return;
+            }
+            
+            System.out.println(a + " " + symbol + " " + b + " = " + result);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Invalid number: " + e.getMessage());
+        }
     }
 }

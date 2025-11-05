@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Exercise 014: Calculator - Input Validation with Exception Handling
+ * Calculator - Input Validation with Exception Handling
  *
  * Your task: Create a calculator that safely handles invalid user input using try...catch blocks.
  *

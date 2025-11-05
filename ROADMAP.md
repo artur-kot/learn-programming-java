@@ -513,29 +513,56 @@ Fields: id, name, grades list.
 
 ---
 
-### **Series 25: Library Management Console**
+### **Series 25: Modules and Imports**
+
+*Organize code and use built-in libraries.*
+95. - [ ] **Imports - Using Built-in Classes**
+Import and use `java.util.Scanner`, `java.util.Random`.
+**Concepts:** import statements, package structure.
+
+96. - [ ] **Imports - Math Library**
+    Use `java.lang.Math` for calculations.
+    **Concepts:** static imports, library methods.
+
+97. - [ ] **Imports - Collections Framework**
+    Import `ArrayList`, `HashMap`, `Collections`.
+    **Concepts:** generic imports, utility classes.
+
+98. - [ ] **Imports - Create Custom Package**
+    Organize your own classes into packages.
+    **Concepts:** package declaration, access levels.
+
+99. - [ ] **Imports - Use Custom Package**
+    Import and use classes from your package.
+    **Concepts:** package visibility, reusability.
+
+---
+
+### **Series 26: Library Management Console**
 
 *Capstone: multi-class project with user data.*
-95. - [ ] **Library - Book Class**
+100. - [ ] **Library - Book Class**
 Define book attributes.
 **Concepts:** OOP basics.
 
-96. - [ ] **Library - Borrow and Return**
+101. - [ ] **Library - Borrow and Return**
     Track borrowed books.
     **Concepts:** state change, booleans.
 
-97. - [ ] **Library - Library Class**
+102. - [ ] **Library - Library Class**
     Store list of books.
     **Concepts:** collections, iteration.
 
-98. - [ ] **Library - Search Books**
+103. - [ ] **Library - Search Books**
     Search by title or author.
     **Concepts:** filtering, string comparison.
 
-99. - [ ] **Library - Save/Load Inventory**
+104. - [ ] **Library - Save/Load Inventory**
     Persist book data to a file.
     **Concepts:** file I/O, exception handling.
 
-100. - [ ] **Library - Main Program Integration**
+105. - [ ] **Library - Main Program Integration**
      Combine all features into final console program.
      **Concepts:** multi-class design, code organization, project structure.
+
+
