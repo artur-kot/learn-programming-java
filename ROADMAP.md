@@ -60,21 +60,21 @@ Create variables for name, age, and email.
 Add, subtract, multiply, divide.
 **Concepts:** arithmetic, numeric types.
 
-12. - [ ] **Calculator - User Input**
+12. - [x] **Calculator - User Input**
     Take numbers from user input.
-    **Concepts:** parsing, validation.
+    **Concepts:** `Scanner`, user input.
 
-13. - [ ] **Calculator - Advanced Math**
+13. - [x] **Calculator - Advanced Math**
     Add modulo, power, and square root.
     **Concepts:** `Math` library, operators.
 
-14. - [ ] **Calculator - Format Results**
-    Round and format decimal outputs.
-    **Concepts:** `printf`, rounding.
+14. - [ ] **Calculator - Input Validation**
+    Handle invalid input with try...catch blocks.
+    **Concepts:** try/catch, `NumberFormatException`, loops.
 
-15. - [ ] **Calculator - Prevent Division by Zero**
-    Validate divisor before division.
-    **Concepts:** conditionals, error checking.
+15. - [ ] **Calculator - Command-Line Arguments**
+    Read numbers and operation from command-line.
+    **Concepts:** args[], `Integer.parseInt()`, `Double.parseDouble()`.
 
 ---
 

@@ -32,16 +32,22 @@ public class CalculatorUserInput {
 
     public static void main(String[] args) {
         // TODO: Create a Scanner to read user input
-        // Hint: Scanner scanner = new Scanner(System.in);
+        // Bonus: Wrap it with try-with-resources (try {...} clause)
 
         // TODO: Prompt the user to enter the first number
         // Hint: System.out.print("Enter first number: ");
         // TODO: Read the first number using scanner.nextInt()
+
         // TODO: Prompt the user to enter the second number
         // TODO: Read the second number using scanner.nextInt()
         // TODO: Call each operation method and display the results
-        // Format: "10 + 5 = 15"
-        // TODO: Close the scanner when done
-        // Hint: scanner.close();
+
+        // Format:
+        // "10 + 5 = 15"
+        // "10 - 5 = 5"
+        // "10 * 5 = 50"
+        // "10 / 5 = 2"
+
+        // TODO: Close the scanner when done (or not if using try-with-resources)
     }
 }

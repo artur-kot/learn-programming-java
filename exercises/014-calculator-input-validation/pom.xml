@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>014-calculator-format-results</artifactId>
+    <artifactId>014-calculator-input-validation</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>014 - Calculator Format Results</name>
-    <description>Learn rounding and decimal formatting to display polished calculator results</description>
+    <name>014 - Calculator Input Validation</name>
+    <description>Learn to handle invalid user input safely using try...catch blocks and validation loops</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
