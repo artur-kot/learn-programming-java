@@ -1,8 +1,8 @@
-# Exercise 026: Method Overloading - Advanced
+# Exercise 026: Method Overloading - Add & Greet
 
 ## Overview
 
-Master **method overloading** - the ability to create multiple methods with the same name but different parameters. This is a form of polymorphism that makes your code more flexible and intuitive. Learn to handle different types and quantities of data with the same method name.
+Master **method overloading** - the ability to create multiple methods with the same name but different parameters. This is a form of polymorphism that makes your code more flexible and intuitive. In this exercise, you'll create two pairs of overloaded methods to handle different data types.
 
 ## What You're Learning
 
@@ -41,98 +41,118 @@ Methods must differ by:
 **Cannot overload by:**
 - Return type alone (not enough for Java to distinguish)
 
-### Real-World Example: Flexible Addition
+### Real-World Example
+
+Different methods for adding numbers depending on type:
 
 ```java
 public static int add(int a, int b) {
-    return a + b;
+    return a + b;           // 5 + 3 = 8
 }
 
 public static double add(double a, double b) {
-    return a + b;
+    return a + b;           // 5.5 + 3.2 = 8.7
 }
-
-public static String add(String a, String b) {
-    return a + b;  // Concatenation
-}
-
-public static int add(int a, int b, int c) {
-    return a + b + c;  // Three parameters
-}
-```
-
-Usage:
-```java
-add(5, 3);              // 8 (int + int)
-add(5.5, 3.2);          // 8.7 (double + double)
-add("Hello", "World");  // "HelloWorld" (concatenation)
-add(5, 3, 2);           // 10 (three ints)
-```
-
-### Type Compatibility
-
-Sometimes Java needs to decide between overloads:
-
-```java
-print(5);     // Exact match: print(int)
-print(5.0);   // Exact match: print(double)
-print(5L);    // Exact match: print(long)
 ```
 
 ## Your Task
 
-Create a program demonstrating method overloading with multiple scenarios:
+Create **2 pairs of overloaded methods**:
 
-### Part 1: Calculation Methods (Different Types)
-- `calculate(int a, int b)` - Add two integers
-- `calculate(double a, double b)` - Add two doubles
-- `calculate(int a, double b)` - Add mixed types (return double)
-- `calculate(String a, String b)` - Concatenate strings
+### Method 1: `add` (Two Overloads)
+- `add(int, int)` → Returns sum of two integers
+- `add(double, double)` → Returns sum of two doubles
 
-### Part 2: Information Display (Different Types)
-- `displayInfo(String name)` - Display person's name
-- `displayInfo(String name, int age)` - Display name and age
-- `displayInfo(String name, int age, String city)` - Display all three
+### Method 2: `greet` (Two Overloads)
+- `greet(String)` → Returns greeting with name
+- `greet(String, int)` → Returns greeting with name and age
 
-### Part 3: Flexible Operations (Different Counts)
-- `sum(int a, int b)` - Sum two numbers
-- `sum(int a, int b, int c)` - Sum three numbers
-- `sum(double a, double b)` - Sum two doubles
-- `sum(double a, double b, double c)` - Sum three doubles
+No method signatures provided—you must figure out:
+- The correct method names (matching test expectations)
+- The parameters each version needs
+- What each version should return
 
-### Part 4: Advanced Formatting (Type Variations)
-- `format(int value)` - Format as integer: "Value: 42"
-- `format(double value)` - Format as decimal: "Value: 3.14"
-- `format(int value, int width)` - Right-align to width
-- `format(double value, int decimalPlaces)` - Control decimal places
-- `format(String label, Object value)` - Generic formatting
+## Requirements
+
+- Create **exactly 4 methods** (2 method names, each with 2 overloads)
+- Each method must have a **clear, single purpose**
+- Each version should handle its specific type(s)
+- Test your methods in `main()` by calling all versions
+- Your `main()` method should demonstrate all 4 methods working correctly
 
 ## Example Output
 
 ```
-=== Part 1: Calculations ===
-add(5, 3) = 8
-add(5.5, 3.2) = 8.7
-add(5, 3.2) = 8.2
-add("Hello", "World") = HelloWorld
+## Hints
 
-=== Part 2: Information Display ===
-Name: Alice
-Name: Alice, Age: 25
-Name: Alice, Age: 25, City: New York
+### Hint 1: Integer Addition
+- What should this method be named? (what operation does it do?)
+- What parameters? (two integers)
+- What should it return? (the sum)
+- Example: `add(5, 3)` → `8`
 
-=== Part 3: Flexible Sum ===
-sum(5, 3) = 8
-sum(5, 3, 2) = 10
-sum(5.5, 3.2) = 8.7
-sum(5.5, 3.2, 1.8) = 10.5
+### Hint 2: Double Addition
+- Same method name as Hint 1
+- What parameters? (two doubles instead)
+- What should it return? (the sum as a double)
+- Example: `add(5.5, 3.2)` → `8.7`
 
-=== Part 4: Advanced Formatting ===
-Value: 42
-Value: 3.14
-      42 (width 6)
-3.14 (2 decimals)
-Temperature: 72
+### Hint 3: Simple Greeting
+- What should this method be named? (something that greets)
+- What parameters? (just a name)
+- What should it return? (a greeting string)
+- Example: `greet("Alice")` → `"Hello, Alice!"`
+
+### Hint 4: Greeting with Age
+- Same method name as Hint 3
+- What parameters? (name and age)
+- What should it return? (a greeting string including age)
+- Example: `greet("Bob", 30)` → `"Hello, Bob! You are 30 years old."`
+
+## Expected Behavior
+
+When you test your methods:
+```
+add(5, 3) → 8
+add(5.5, 3.2) → 8.7
+
+greet("Alice") → "Hello, Alice!"
+greet("Bob", 30) → includes name and age
+```
+
+## Testing Instructions
+
+Run your tests:
+```bash
+mvn test
+```
+
+Your methods should pass all 8 test cases (4 for `add`, 4 for `greet`).
+
+If a test fails:
+1. Check your method names match: `add` and `greet`
+2. Verify you're returning the correct type
+3. Test edge cases with negative numbers
+
+## Reflection Questions
+
+After completing this exercise, think about:
+
+1. **Why is overloading useful?** How would the code be different without it?
+2. **How does Java know which method to call?** (Hint: it looks at the parameter types)
+3. **Can you think of other cases where overloading would be helpful?**
+4. **What would happen if you created `add(int, double)` and `add(double, int)`?** Would both work?
+
+## Next Steps
+
+- **Exercise 027** shows you how to refactor messy code by extracting it into well-organized methods
+- Consider creating more overloads for other methods you've learned
+
+## Read More
+
+- [Oracle Java Tutorials - Defining Methods: Overloading](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+- Method signatures and how Java resolves method calls
+- Type compatibility in method selection
 ```
 
 ## Algorithm

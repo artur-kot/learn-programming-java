@@ -5,110 +5,61 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MethodOverloadingTest {
 
+    // Tests for overloaded add methods
     @Test
-    public void testCalculateIntInt() {
-        int result = MethodOverloading.calculate(5, 3);
-        assertEquals(8, result, "5 + 3 should equal 8");
+    public void testAddIntInt() {
+        int result = MethodOverloading.add(5, 3);
+        assertEquals(8, result, "add(5, 3) should equal 8");
     }
 
     @Test
-    public void testCalculateDoubleDouble() {
-        double result = MethodOverloading.calculate(5.5, 3.2);
-        assertEquals(8.7, result, 0.01, "5.5 + 3.2 should equal 8.7");
+    public void testAddIntIntNegative() {
+        int result = MethodOverloading.add(-5, 3);
+        assertEquals(-2, result, "add(-5, 3) should equal -2");
     }
 
     @Test
-    public void testCalculateIntDouble() {
-        double result = MethodOverloading.calculate(5, 3.2);
-        assertEquals(8.2, result, 0.01, "5 + 3.2 should equal 8.2");
+    public void testAddDoubleDouble() {
+        double result = MethodOverloading.add(5.5, 3.2);
+        assertEquals(8.7, result, 0.01, "add(5.5, 3.2) should equal 8.7");
     }
 
     @Test
-    public void testCalculateStringString() {
-        String result = MethodOverloading.calculate("Hello", "World");
-        assertEquals("HelloWorld", result, "Should concatenate strings");
+    public void testAddDoubleDoubleNegative() {
+        double result = MethodOverloading.add(-5.5, 3.2);
+        assertEquals(-2.3, result, 0.01, "add(-5.5, 3.2) should equal -2.3");
+    }
+
+    // Tests for overloaded greet methods
+    @Test
+    public void testGreetString() {
+        String result = MethodOverloading.greet("Alice");
+        assertTrue(result.contains("Alice"),
+                "Greeting should include the name");
     }
 
     @Test
-    public void testSumIntInt() {
-        int result = MethodOverloading.sum(5, 3);
-        assertEquals(8, result, "5 + 3 should equal 8");
+    public void testGreetStringDifferent() {
+        String result = MethodOverloading.greet("Bob");
+        assertTrue(result.contains("Bob"),
+                "Greeting should include the name");
     }
 
     @Test
-    public void testSumIntIntInt() {
-        int result = MethodOverloading.sum(5, 3, 2);
-        assertEquals(10, result, "5 + 3 + 2 should equal 10");
+    public void testGreetStringInt() {
+        String result = MethodOverloading.greet("Charlie", 25);
+        assertTrue(result.contains("Charlie"),
+                "Greeting should include the name");
+        assertTrue(result.contains("25"),
+                "Greeting should include the age");
     }
 
     @Test
-    public void testSumDoubleDouble() {
-        double result = MethodOverloading.sum(5.5, 3.2);
-        assertEquals(8.7, result, 0.01, "5.5 + 3.2 should equal 8.7");
-    }
-
-    @Test
-    public void testSumDoubleDoubleDouble() {
-        double result = MethodOverloading.sum(5.5, 3.2, 1.8);
-        assertEquals(10.5, result, 0.01, "5.5 + 3.2 + 1.8 should equal 10.5");
-    }
-
-    @Test
-    public void testFormatInt() {
-        String result = MethodOverloading.format(42);
-        assertTrue(result.contains("42"), "Should contain the number");
-        assertTrue(result.contains("Value") || result.length() > 0,
-                "Should format the integer");
-    }
-
-    @Test
-    public void testFormatDouble() {
-        String result = MethodOverloading.format(3.14);
-        assertTrue(result.contains("3.14") || result.contains("3"),
-                "Should contain the double value");
-    }
-
-    @Test
-    public void testFormatIntWidth() {
-        String result = MethodOverloading.format(42, 6);
-        assertEquals(6, result.length(),
-                "Formatted result should be 6 characters wide");
-        assertTrue(result.contains("42"), "Should contain the value");
-    }
-
-    @Test
-    public void testFormatDoubleDecimal() {
-        String result = MethodOverloading.format(3.14159, 2);
-        assertTrue(result.contains("3.14"),
-                "Should format to 2 decimal places");
-    }
-
-    @Test
-    public void testFormatStringObject() {
-        String result = MethodOverloading.format("Temperature", 72);
-        assertTrue(result.contains("Temperature"),
-                "Should contain the label");
-        assertTrue(result.contains("72"),
-                "Should contain the value");
-    }
-
-    @Test
-    public void testDisplayInfoSingleParam() {
-        // This test just verifies the method is callable
-        // Output testing would require capturing System.out
-        MethodOverloading.displayInfo("Alice");
-        assertTrue(true, "displayInfo(String) should be callable");
-    }
-
-    @Test
-    public void testDisplayInfoTwoParams() {
-        MethodOverloading.displayInfo("Bob", 30);
-        assertTrue(true, "displayInfo(String, int) should be callable");
-    }
-
-    @Test
-    public void testDisplayInfoThreeParams() {
-        MethodOverloading.displayInfo("Charlie", 25, "Boston");
-        assertTrue(true, "displayInfo(String, int, String) should be callable");
+    public void testGreetStringIntDifferent() {
+        String result = MethodOverloading.greet("Diana", 30);
+        assertTrue(result.contains("Diana"),
+                "Greeting should include the name");
+        assertTrue(result.contains("30"),
+                "Greeting should include the age");
     }
 }
