@@ -1,10 +1,10 @@
-# Exercise 027: Calculator Refactor - Modular Design & Method Organization
+# Exercise 027: Text Analyzer Refactor - Modular Design & Method Organization
 
 ## Overview
 
-This exercise teaches **refactoring** - transforming working code into better-organized, maintainable code. You are provided with a **fully functional calculator application that is poorly organized** (all logic crammed into `main()`). Your task is to refactor it by extracting methods to improve design, eliminate duplication, and enhance readability. This is a realistic software development task: learning to improve code without changing its behavior.
+This exercise teaches **refactoring** - transforming working code into better-organized, maintainable code. You are provided with a **fully functional text analyzer application that is poorly organized** (all logic crammed into `main()`). Your task is to refactor it by extracting methods to improve design, eliminate duplication, and enhance readability. This is a realistic software development task: learning to improve code without changing its behavior.
 
-**IMPORTANT:** The calculator already works perfectly! Your job is to reorganize the code, not fix bugs.
+**IMPORTANT:** The text analyzer already works perfectly! Your job is to reorganize the code, not fix bugs.
 
 ## What You're Learning
 
@@ -13,49 +13,50 @@ This exercise teaches **refactoring** - transforming working code into better-or
 **Monolithic Code** (Bad):
 ```java
 public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Welcome to Calculator");
-    
-    // All logic crammed into main()
-    System.out.print("Enter first number: ");
-    double num1 = scanner.nextDouble();
-    System.out.print("Enter second number: ");
-    double num2 = scanner.nextDouble();
-    
-    // Repeated validation
-    if (num1 < 0 || num2 < 0) {
-        System.out.println("Invalid input");
-        return;
+    // File validation mixed with main logic
+    File file = new File(filePath);
+    if (file.exists() && file.isFile()) {
+        // File reading mixed in
+        Scanner fileScanner = new Scanner(file);
+        while (fileScanner.hasNextLine()) {
+            // Analysis logic embedded here
+        }
+        
+        // Counting scattered everywhere
+        int wordCount = 0;
+        String[] words = content.split("\\s+");
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                wordCount++;
+            }
+        }
+        
+        // More counting...
+        // Even more counting...
     }
-    
-    // Repeated validation again
-    if (num1 > 1000 || num2 > 1000) {
-        System.out.println("Invalid input");
-        return;
-    }
-    
-    // Many more operations...
 }
 ```
 
 **Refactored Code** (Good):
 ```java
-public static boolean isValidNumber(double num) {
-    return num >= 0 && num <= 1000;
+public static boolean isValidFile(String filePath) {
+    File file = new File(filePath);
+    return file.exists() && file.isFile();
 }
 
-public static double getNumber(Scanner scanner, String prompt) {
-    System.out.print(prompt);
-    return scanner.nextDouble();
+public static String readFile(String filePath) {
+    // Handle file reading separately
+}
+
+public static int countWords(String filePath) {
+    String content = readFile(filePath);
+    // Count and return
 }
 
 public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    runCalculator(scanner);
-}
-
-public static void runCalculator(Scanner scanner) {
-    // Clean, readable, uses helper methods
+    if (isValidFile(filePath)) {
+        analyzeFile(filePath);
+    }
 }
 ```
 
@@ -69,238 +70,177 @@ public static void runCalculator(Scanner scanner) {
 
 ## Your Task
 
-You are provided with a **working calculator application** that is poorly organized. Your task is to refactor it by extracting logic into methods. The application already works - you just need to clean it up!
+You are provided with a **working text analyzer application** that is poorly organized. Your task is to refactor it by extracting logic into methods. The application already works - you just need to clean it up!
 
 **Key Problems in Current Code:**
-1. ❌ All logic is in `main()` - 130+ lines of code in one method!
-2. ❌ Validation code is repeated THREE times (for operation, num1, num2)
-3. ❌ Operation logic is a messy if/else chain
-4. ❌ Hard to test individual pieces
-5. ❌ Hard to extend with new features
-6. ❌ Difficult to read and understand
+1. ❌ All logic is in `main()` - 150+ lines of code in one method!
+2. ❌ File validation logic is mixed throughout
+3. ❌ File I/O is coupled with analysis logic
+4. ❌ Text analysis (counting) code is scattered and complex
+5. ❌ Hard to test individual pieces
+6. ❌ Hard to extend with new analysis features
+7. ❌ Difficult to read and understand
 
-### Part 1: Extract Operation Methods
-Create separate methods for each calculation:
-- `add(double a, double b)` - Return sum
-- `subtract(double a, double b)` - Return difference
-- `multiply(double a, double b)` - Return product
-- `divide(double a, double b)` - Return quotient (handle division by zero)
+## Extract These Methods
 
-### Part 2: Extract Validation Method
-- `isValidNumber(double num)` - Check if number is in acceptable range
-- `isValidOperation(String op)` - Check if operation is recognized
+### Part 1: File Validation & I/O
+- `isValidFile(String filePath)` - Check if file exists and is readable
+- `readFile(String filePath)` - Read entire file content into String
+- `getFilePath(Scanner scanner)` - Get file path from user with validation
 
-### Part 3: Extract Input Methods
-- `getNumber(Scanner scanner, String prompt)` - Get and return a number from user
-- `getOperation(Scanner scanner)` - Get and return operation choice from user
+### Part 2: Text Analysis Methods
+- `countWords(String filePath)` - Count total words in file
+- `countLines(String filePath)` - Count non-empty lines
+- `countSentences(String filePath)` - Count sentences (split by `.!?`)
+- `countCharacters(String filePath)` - Count non-whitespace characters
 
-### Part 4: Build Menu System
-- `displayMenu()` - Show available operations
-- `performOperation(double a, double b, String operation)` - Execute operation and return result
-- `runCalculator()` - Main loop that uses all helper methods
+### Part 3: Display & Statistics
+- `displayResults(String filePath, int lines, int words, int sentences, int chars)` - Format and display analysis results
+- `calculateStatistics(int words, int chars, int sentences)` - Calculate averages
 
-### Part 5: Main Flow (Already Mostly There)
-- Initialize Scanner
-- Show welcome message
-- Loop to allow multiple calculations
-- Use the refactored methods
+### Part 4: Main Coordination
+- `analyzeFile(String filePath)` - Main method that coordinates the analysis
+- Keep `main()` simple - just handle the loop and call `analyzeFile()`
 
-## Example Output
+## Expected Behavior
 
-```
-========================================
-        Welcome to Calculator!
-========================================
+The refactored program should work **exactly the same** as the original:
 
-Menu:
-  1. Add
-  2. Subtract
-  3. Multiply
-  4. Divide
-  5. Exit
-
-Enter operation (1-5): 1
-Enter first number: 10
-Enter second number: 5
-Result: 10.0 + 5.0 = 15.0
-
-Menu:
-  1. Add
-  2. Subtract
-  3. Multiply
-  4. Divide
-  5. Exit
-
-Enter operation (1-5): 3
-Enter first number: 4
-Enter second number: 8
-Result: 4.0 * 8.0 = 32.0
-
-Menu:
-  1. Add
-  2. Subtract
-  3. Multiply
-  4. Divide
-  5. Exit
-
-Enter operation (1-5): 5
-Thanks for using Calculator!
-```
+1. User enters file path
+2. Program validates the file
+3. Program reads and analyzes text
+4. Program displays results with statistics
+5. User can analyze multiple files
+6. User can exit with "exit" command
 
 ## Before & After: Key Refactoring Points
 
 ### Before (Monolithic):
 ```java
-// Validation repeated multiple times
-if (num1 < 0 || num1 > 1000) { ... }
-// ... later ...
-if (num2 < 0 || num2 > 1000) { ... }
+// File validation scattered
+File file = new File(filePath);
+if (file.exists() && file.isFile()) {
+    // ... do something
+}
+// Later, validation again
+if (file.exists() && file.isFile()) {
+    // ... do something else
+}
 ```
 
 ### After (Refactored):
 ```java
-private static boolean isValidNumber(double num) {
-    return num >= 0 && num <= 1000;
+private static boolean isValidFile(String filePath) {
+    File file = new File(filePath);
+    return file.exists() && file.isFile();
 }
 
 // Use everywhere:
-if (!isValidNumber(num1) || !isValidNumber(num2)) { ... }
+if (isValidFile(filePath)) { ... }
 ```
 
 ### Before (Monolithic):
 ```java
-System.out.print("Enter operation: ");
-String operation = scanner.next();
-if (operation.equals("+")) {
-    // Do addition
-} else if (operation.equals("-")) {
-    // Do subtraction
+// File reading mixed with analysis
+Scanner fileScanner = new Scanner(file);
+StringBuilder sb = new StringBuilder();
+while (fileScanner.hasNextLine()) {
+    sb.append(fileScanner.nextLine()).append("\n");
+}
+String content = sb.toString();
+// Now count words in same method
+int wordCount = 0;
+String[] words = content.split("\\s+");
+for (String word : words) {
+    if (!word.isEmpty()) wordCount++;
 }
 ```
 
 ### After (Refactored):
 ```java
-private static double performOperation(double a, double b, String op) {
-    switch(op) {
-        case "+": return add(a, b);
-        case "-": return subtract(a, b);
-        // ...
-    }
+private static String readFile(String filePath) {
+    // Only handles file I/O
 }
-// Use it:
-double result = performOperation(num1, num2, operation);
+
+private static int countWords(String filePath) {
+    String content = readFile(filePath);
+    // Only handles word counting
+}
+// Each method has single responsibility
 ```
 
 ## Refactoring Checklist
 
-- [ ] Extract `add()`, `subtract()`, `multiply()`, `divide()` methods
-- [ ] Create `isValidNumber()` validation method
-- [ ] Create `getNumber()` input method
-- [ ] Create `displayMenu()` method
-- [ ] Create `performOperation()` method that uses the operation methods
-- [ ] Create `runCalculator()` loop that coordinates everything
+- [ ] Extract `isValidFile()` - validate file path
+- [ ] Extract `readFile()` - read file content
+- [ ] Extract `getFilePath()` - get input from user
+- [ ] Extract `countWords()` - count words only
+- [ ] Extract `countLines()` - count lines only
+- [ ] Extract `countSentences()` - count sentences only
+- [ ] Extract `countCharacters()` - count characters only
+- [ ] Extract `displayResults()` - format and display output
+- [ ] Extract `calculateStatistics()` - compute averages
+- [ ] Extract `analyzeFile()` - coordinate all analysis
+- [ ] Simplify `main()` to just loop and call `analyzeFile()`
 - [ ] Remove all duplicated code
-- [ ] Ensure main() is clean and calls `runCalculator()`
-- [ ] Test all operations work correctly
-- [ ] Test invalid input handling
+- [ ] Test all methods work correctly
 
-## Starter Code (Already Functional - But Needs Refactoring!)
+## Testing Instructions
 
-```java
-import java.util.Scanner;
-
-public class CalculatorRefactor {
-    
-    // TODO: Extract these operation methods from main()
-    public static double add(double a, double b) {
-        // TODO: Implement
-        return 0.0;
-    }
-    
-    public static double subtract(double a, double b) {
-        // TODO: Implement
-        return 0.0;
-    }
-    
-    public static double multiply(double a, double b) {
-        // TODO: Implement
-        return 0.0;
-    }
-    
-    public static double divide(double a, double b) {
-        // TODO: Implement - Watch for division by zero!
-        return 0.0;
-    }
-    
-    // TODO: Extract validation logic
-    public static boolean isValidNumber(double num) {
-        // TODO: Implement
-        return false;
-    }
-    
-    // TODO: Extract input logic
-    public static double getNumber(Scanner scanner, String prompt) {
-        // TODO: Implement
-        return 0.0;
-    }
-    
-    // TODO: Extract menu display
-    public static void displayMenu() {
-        // TODO: Implement
-    }
-    
-    // TODO: Extract operation dispatch
-    public static double performOperation(double a, double b, String operation) {
-        // TODO: Implement - Use the operation methods above
-        return 0.0;
-    }
-    
-    // TODO: Extract calculator loop
-    public static void runCalculator() {
-        // TODO: Implement - Main game loop
-    }
-    
-    /**
-     * Main entry point - should be very clean after refactoring
-     */
-    public static void main(String[] args) {
-        System.out.println("========================================");
-        System.out.println("        Welcome to Calculator!");
-        System.out.println("========================================\n");
-        
-        runCalculator();
-        
-        System.out.println("\nThanks for using Calculator!");
-    }
-}
+Run your tests:
+```bash
+mvn test
 ```
 
-## Testing Hints
-
-The test file will verify:
-- Each operation method produces correct results
-- Validation correctly identifies valid and invalid numbers
-- Input methods can retrieve values from Scanner
-- Menu displays correctly
-- performOperation dispatches to correct operation
-- Division by zero is handled
-- Calculator loop can handle multiple operations
-- Invalid operations are rejected
+Your extracted methods should pass all test cases. Tests verify:
+- File validation works correctly
+- File reading returns content
+- Word counting is accurate
+- Line counting is accurate
+- Sentence counting is accurate
+- Character counting ignores whitespace
+- Results display correctly
+- Integration works end-to-end
 
 ## Tips
 
-- **Start with simple methods**: Add, subtract, multiply, divide first
-- **Then validation**: Extract the validation logic
-- **Then input**: Create input helper methods
-- **Then menu**: Display menu and get user choice
-- **Finally coordination**: Create the main loop that ties it all together
+- **Start small**: Extract file validation and I/O methods first
+- **Then analysis**: Extract each counting method
+- **Then display**: Extract display logic
+- **Finally coordination**: Extract `analyzeFile()` to coordinate
 - **Test incrementally**: Test each method as you extract it
 - **Don't change behavior**: Refactoring shouldn't change what the program does
+- **Use meaningful names**: Method names should clearly describe what they do
 
 ## Challenge Questions
 
 1. What code is duplicated in the original that we eliminated?
-2. How does `performOperation()` make the menu system cleaner?
-3. Why is validation in a separate method better than inline checks?
-4. How would adding more operations (like square root) be easier now?
+2. Why is it better to have separate counting methods instead of one big method?
+3. How does extracting `readFile()` make the code more testable?
+4. How would adding new analysis features (e.g., count paragraphs) be easier now?
 5. Could these methods be reused in other programs?
+
+## Reflection Questions
+
+After completing this exercise, think about:
+
+1. **How much easier is the code to read now?** Compare before and after
+2. **Which methods could be reused in other programs?**
+3. **How would you add a new analysis feature** (e.g., count paragraphs)?
+4. **How would testing be different with vs. without refactoring?**
+5. **What other code smells did you notice in the original?**
+
+## Next Steps
+
+After mastering refactoring with this exercise:
+- Look for opportunities to refactor your own previous code
+- Consider extracting methods in larger programs
+- Apply these principles to keep future code clean and organized
+
+## Read More
+
+- [Refactoring Wikipedia](https://en.wikipedia.org/wiki/Code_refactoring)
+- Code smell patterns: Long Method, Duplicate Code, Large Class
+- Martin Fowler's "Refactoring: Improving the Design of Existing Code"
+- Clean Code principles by Robert C. Martin
+

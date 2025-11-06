@@ -5,15 +5,13 @@ import java.util.Scanner;
 /**
  * REFACTORING EXERCISE: Text Analyzer Tool
  *
- * This text analyzer works, but the code is poorly organized! All logic is crammed
- * into the main() method.
+ * This text analyzer works, but the code is poorly organized! All logic is
+ * crammed into the main() method.
  *
- * YOUR TASK: Refactor this code by extracting methods for:
- * 1. File I/O operations (reading files)
- * 2. Text analysis methods (counting words, lines, sentences, characters)
- * 3. Input validation (file path validation)
- * 4. Display and formatting
- * 5. Main analysis coordination logic
+ * YOUR TASK: Refactor this code by extracting methods for: 1. File I/O
+ * operations (reading files) 2. Text analysis methods (counting words, lines,
+ * sentences, characters) 3. Input validation (file path validation) 4. Display
+ * and formatting 5. Main analysis coordination logic
  *
  * The functionality should NOT change - just reorganize the code! This is
  * called REFACTORING - improving code without changing behavior.
@@ -24,7 +22,6 @@ public class TextAnalyzer {
     // TODO: Add input methods here (getFilePath, readFile)
     // TODO: Add analysis methods here (countWords, countLines, countSentences, countCharacters)
     // TODO: Add display methods here (displayResults, analyzeFile)
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +32,6 @@ public class TextAnalyzer {
         // MONOLITHIC CODE - NEEDS REFACTORING!
         // All logic is here in main() - this is BAD DESIGN!
         // You should extract this into multiple methods.
-
         boolean running = true;
 
         while (running) {
@@ -69,14 +65,13 @@ public class TextAnalyzer {
             String content = "";
             try {
                 File file = new File(filePath);
-                Scanner fileScanner = new Scanner(file);
-                StringBuilder sb = new StringBuilder();
-
-                while (fileScanner.hasNextLine()) {
-                    sb.append(fileScanner.nextLine()).append("\n");
+                StringBuilder sb;
+                try (Scanner fileScanner = new Scanner(file)) {
+                    sb = new StringBuilder();
+                    while (fileScanner.hasNextLine()) {
+                        sb.append(fileScanner.nextLine()).append("\n");
+                    }
                 }
-
-                fileScanner.close();
                 content = sb.toString();
 
                 if (content.isEmpty()) {
@@ -151,4 +146,3 @@ public class TextAnalyzer {
         System.out.println("\nThanks for using Text Analyzer!");
     }
 }
-
