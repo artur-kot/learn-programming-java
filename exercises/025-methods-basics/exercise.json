@@ -1,28 +1,27 @@
 {
   "id": "025",
   "series": 10,
-  "title": "Methods Basics - Define, Parameters & Return Values",
-  "description": "Master the fundamentals of methods by defining simple methods, adding parameters to customize behavior, and returning values from methods. Build reusable code building blocks.",
+  "title": "Methods Basics - Email Validation & String Reversal",
+  "description": "Create two utility methods from scratch: email validation and string reversal. Practice method design without starter signatures.",
   "difficulty": "beginner",
   "setup_command": "mvn clean install",
   "test_command": "mvn test",
   "topics": [
-    "method syntax",
-    "method calls",
+    "method design",
     "parameters",
-    "return types",
-    "return statements",
-    "void methods"
+    "return values",
+    "string methods",
+    "method naming",
+    "validation logic"
   ],
   "learningObjectives": [
-    "Understand method syntax and structure",
-    "Define methods with no parameters",
-    "Call methods from main()",
-    "Add parameters to customize method behavior",
-    "Use return types to send values back to caller",
-    "Understand the difference between void and value-returning methods",
-    "Build reusable code components"
+    "Design methods from scratch (signatures, names, parameters, return types)",
+    "Understand what makes a good method name",
+    "Implement validation logic for real-world data",
+    "Work with string methods (contains, charAt, length)",
+    "Handle edge cases in method implementation",
+    "Test and verify method correctness"
   ],
-  "estimatedTime": "40-50 minutes",
+  "estimatedTime": "20-30 minutes",
   "status": "not-started"
 }

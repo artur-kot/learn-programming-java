@@ -1,270 +1,156 @@
-# Exercise 025: Methods Basics - Define, Parameters & Return Values
+# Exercise 025: Methods Basics - Email Validation & String Reversal
 
 ## Overview
 
-Master the fundamentals of methods by learning to define simple methods, add parameters to customize behavior, and return values from methods. Methods are the building blocks of reusable code - they let you organize logic into named, reusable functions.
+You've already learned method syntax. Now it's time to apply that knowledge to **real-world problems**. In this exercise, you'll create two practical utility methods that solve actual programming tasks: validating an email address and reversing a string.
 
 ## What You're Learning
 
-### Part 1: Simple Method Definition
+### From Syntax to Practice
 
-A **method** is a reusable block of code that performs a specific task. Basic syntax:
+You now know:
+- How to define methods with parameters
+- How to work with return values  
+- When to use `void` vs returning a value
 
-```java
-public static void greet() {
-    System.out.println("Hello, World!");
-}
+But **syntax is just the beginning**. Real developers design methods around:
+
+1. **Clear Purpose** - Each method does ONE thing well
+2. **Reusability** - Methods are called multiple times with different inputs
+3. **Correctness** - Edge cases matter (empty strings, missing characters, etc.)
+4. **Testing** - Methods that return values are easier to test than methods that print
+5. **Flexibility** - Methods that return values let the caller decide what to do with the result
+
+## Challenge Description
+
+You need to create **2 methods** from scratch (you decide the names, parameters, and return types):
+
+1. **Email Validator** - Checks if an email address is properly formatted (contains both '@' and '.')
+2. **String Reverser** - Takes a string and returns it reversed
+
+No method signatures are provided—you must figure out:
+- What should the method be named?
+- What parameter(s) should it accept?
+- What should it return?
+
+## Requirements
+
+- Create **exactly 2 methods** (from scratch, no starter signatures)
+- Each method must have a **clear, single purpose**
+- Each method should use a `return` statement to send a value back
+- Method names should be descriptive (match the test expectations)
+- Test your methods in `main()` by calling them with different inputs
+- Your `main()` method should demonstrate both methods working correctly
+
+## Hints
+
+### Hint 1: Email Validation
+What makes a valid email? The simplest check: does it contain both '@' and '.'?
+
+Think about:
+- What parameter does the method need? (the email string to validate)
+- What should it return? (true if valid, false if not)
+- What's the method name? (should be clear what it does)
+
+### Hint 2: String Reversal
+You can reverse a string by building it backward. Remember:
+- Strings have a `.charAt(index)` method to get individual characters
+- Strings have a `.length()` method
+- You can loop backward: `for (int i = text.length() - 1; i >= 0; i--)`
+
+Think about:
+- What parameter does the method need? (the string to reverse)
+- What should it return? (the reversed string)
+- What's the method name? (should be clear what it does)
+
+## Expected Behavior
+
+When you test your code:
+```
+isValidEmail("alice@example.com") → true
+isValidEmail("notanemail") → false
+
+reverseString("hello") → "olleh"
+reverseString("") → ""
 ```
 
-Breaking this down:
-- `public` - accessible from anywhere
-- `static` - belongs to the class (not an object instance)
-- `void` - the method doesn't return a value
-- `greet()` - the method name
-- `{ ... }` - the method body
+Price: $100 with 20% off -> $80.0
 
-### Calling a Method
+Text: "Programming" -> Vowels: 3
 
-```java
-public static void main(String[] args) {
-    greet();  // Call the method
-    greet();  // Can call it multiple times
-}
+
+## Testing Instructions
+
+Run your tests:
+```bash
+mvn test
 ```
 
-Output:
-```
-Hello, World!
-Hello, World!
-```
+Your methods should pass all 8 test cases. Tests verify:
+- Email validation with various inputs (@, ., edge cases)
+- String reversal correctness (including empty strings and single characters)
 
-### Part 2: Methods with Parameters
+If a test fails:
+1. Check your method names match exactly: `isValidEmail` and `reverseString`
+2. Verify you're returning the correct type (boolean for email, String for reversal)
+3. Test edge cases: empty strings, single characters, multiple dots or @ symbols
 
-**Parameters** are variables that a method accepts to customize its behavior:
+## Reflection Questions
 
-```java
-public static void greet(String name) {
-    System.out.println("Hello, " + name + "!");
-}
-```
+After completing this exercise, think about:
 
-Calling with arguments:
-```java
-greet("Alice");  // Prints: Hello, Alice!
-greet("Bob");    // Prints: Hello, Bob!
-```
+1. **Why return a value instead of printing?** How does that make your methods more reusable?
+2. **What edge cases did you miss initially?** (empty string, single character, multiple @ symbols?)
+3. **Could your email validation be improved?** What other checks could make it better?
+4. **Where would these methods be useful?** Name 3 real programs that might use them.
 
-Multiple parameters:
+## Next Steps
 
-```java
-public static void add(int a, int b) {
-    int sum = a + b;
-    System.out.println(a + " + " + b + " = " + sum);
-}
-```
+- **Exercise 026** teaches **method overloading**—creating multiple methods with the same name but different parameters
+- After that, **Exercise 027** shows you how to refactor messy code by extracting it into well-organized methods
 
-### Part 3: Methods with Return Values
+## Read More
 
-A **return value** lets a method send data back to the caller:
-
-```java
-public static int multiply(int a, int b) {
-    return a * b;  // Return the result
-}
+- [Oracle Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+- String methods in Java: `.contains()`, `.charAt()`, `.length()`
+- Using return values from methods
 ```
 
-Using the return value:
+## Testing Instructions
 
-```java
-int result = multiply(5, 3);  // result = 15
-System.out.println(result);   // Prints: 15
+Run your tests:
+```bash
+mvn test
 ```
 
-Key differences:
-- `void` methods do NOT return a value
-- Value-returning methods specify a return type (`int`, `double`, `String`, etc.)
-- Use `return` keyword to send value back to caller
+Your methods should pass all test cases. Tests verify:
+- Email validation logic
+- String reversal correctness
+- Discount calculations
+- Vowel counting
+- State abbreviation mapping
 
-## Your Task
+If a test fails, check:
+1. Are you returning the correct type?
+2. Are you handling edge cases (empty strings, special characters)?
+3. Are your conditions correct?
 
-Create a program demonstrating all three method types:
+## Reflection Questions
 
-### Part 1: Simple Methods (No Parameters, No Return)
-- `printWelcome()` - Print a welcome message
-- `printBoundary()` - Print a line of dashes for formatting
+After completing this exercise, think about:
 
-### Part 2: Methods with Parameters
-- `greet(String name)` - Greet a person by name
-- `printMultipleTimes(String message, int times)` - Print a message N times
-- `calculateArea(double length, double width)` - Calculate and print rectangle area
+1. **Why did you return values instead of printing?** How does that make your methods more flexible?
+2. **Could you combine any of these methods?** For example, could `reverseString()` be useful inside another method?
+3. **What happens if someone passes `null` to your method?** How would you handle that?
+4. **If you needed these methods in 5 different programs, why is it better to have them in a library than rewriting them each time?**
 
-### Part 3: Methods with Return Values
-- `add(int a, int b)` - Return the sum
-- `subtract(int a, int b)` - Return the difference
-- `multiply(int a, int b)` - Return the product
-- `divide(int a, int b)` - Return the quotient (watch for zero!)
-- `getFullName(String firstName, String lastName)` - Return combined name
+## Next Steps
 
-## Example Output
+- **Exercise 026** teaches **method overloading**—creating multiple methods with the same name but different parameters
+- After that, **Exercise 027** shows you how to refactor messy code by extracting it into well-organized methods
 
-```
-==================================
-        Welcome to Methods!
-==================================
+## Read More
 
---- Simple Methods ---
-Hello from method!
-
---- Methods with Parameters ---
-Hello, Alice!
-Hello, Bob!
-
-The area of 5 x 3 is: 15 square units.
-Message printed 4 times:
-* Learn Java!
-* Learn Java!
-* Learn Java!
-* Learn Java!
-
---- Methods with Return Values ---
-5 + 3 = 8
-10 - 2 = 8
-4 * 6 = 24
-20 / 4 = 5
-
-Full name: Alice Johnson
-```
-
-## Algorithm
-
-1. **Part 1**: Create void methods that print output
-2. **Part 2**: Add parameters to methods to make them flexible
-3. **Part 3**: Create methods that return values instead of printing
-4. **Main**: Call all methods from main() to demonstrate usage
-
-## Method Syntax Reference
-
-```java
-// Void method (no return)
-public static void methodName() {
-    // Code here
-}
-
-// Void method with parameters
-public static void methodName(type param1, type param2) {
-    // Use param1 and param2
-}
-
-// Method with return value
-public static returnType methodName() {
-    // Do work
-    return value;  // Must match returnType
-}
-
-// Method with parameters and return value
-public static returnType methodName(type param1, type param2) {
-    // Do work with parameters
-    return value;  // Must match returnType
-}
-```
-
-## Tips
-
-- **Method names** should describe what they do (verb + noun is common)
-- **Parameters** should have meaningful names
-- **Return type** must match the value you return
-- **void** methods don't need (and shouldn't use) return statements
-- **Call methods** from main() to use them
-- Methods make code **reusable** - define once, use many times
-
-## Starter Code
-
-```java
-public class MethodsBasics {
-    
-    /**
-     * Part 1: Simple methods with no parameters or return values
-     */
-    
-    public static void printWelcome() {
-        // TODO: Print a welcome message
-    }
-    
-    public static void printBoundary() {
-        // TODO: Print a line of dashes (==============)
-    }
-    
-    /**
-     * Part 2: Methods with parameters (but no return values)
-     */
-    
-    public static void greet(String name) {
-        // TODO: Print "Hello, [name]!"
-    }
-    
-    public static void printMultipleTimes(String message, int times) {
-        // TODO: Use a loop to print the message 'times' times
-        // Hint: for (int i = 0; i < times; i++)
-    }
-    
-    public static void calculateArea(double length, double width) {
-        // TODO: Calculate area and print "The area of [length] x [width] is: [area] square units."
-    }
-    
-    /**
-     * Part 3: Methods with return values
-     */
-    
-    public static int add(int a, int b) {
-        // TODO: Return a + b
-        return 0;  // Placeholder
-    }
-    
-    public static int subtract(int a, int b) {
-        // TODO: Return a - b
-        return 0;  // Placeholder
-    }
-    
-    public static int multiply(int a, int b) {
-        // TODO: Return a * b
-        return 0;  // Placeholder
-    }
-    
-    public static int divide(int a, int b) {
-        // TODO: Return a / b (watch out for division by zero!)
-        // For now, assume b is never 0
-        return 0;  // Placeholder
-    }
-    
-    public static String getFullName(String firstName, String lastName) {
-        // TODO: Return firstName + " " + lastName
-        return "";  // Placeholder
-    }
-    
-    /**
-     * Main method - demonstrates all method types
-     */
-    public static void main(String[] args) {
-        // TODO: Call all the methods above to demonstrate how they work
-        
-        // Example structure:
-        // 1. Call printWelcome() and printBoundary()
-        // 2. Call greet() with a few different names
-        // 3. Call printMultipleTimes()
-        // 4. Call calculateArea()
-        // 5. Use the return values from add(), subtract(), multiply(), divide()
-        //    Store results and print them
-        // 6. Call getFullName() and print the result
-    }
-}
-```
-
-## Testing Hints
-
-The test file will verify:
-- Each method is accessible and callable
-- Methods with parameters accept correct argument types
-- Return value methods return correct values
-- add/subtract/multiply/divide produce correct math results
-- String methods concatenate correctly
-- Methods print expected output
+- [Oracle Java Tutorials - Defining Methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+- String methods in Java: `.charAt()`, `.length()`, `.toUpperCase()`, `.toLowerCase()`
+- Return values: How to use the result of a method call in your code

@@ -15,7 +15,8 @@ public class GuessingGame {
     public static int generateSecretNumber() {
         // TODO: Implement random number generation
         // Use Random class to generate number between 1 and 100
-        // Hint: new Random().nextInt(100) + 1
+        // Hint: new Random().nextInt() with correct parameters
+
         return 0;  // Placeholder
     }
 
@@ -31,7 +32,9 @@ public class GuessingGame {
         // - Check if it's in range 1-100
         // - Return true only if both conditions pass
         // - Catch NumberFormatException and return false
-        return false;  // Placeholder
+        // - Whitespaces should be trimmed before parsing
+
+        return false; // Placeholder
     }
 
     /**
@@ -57,6 +60,7 @@ public class GuessingGame {
         // - If guess < secret: return "Too low!"
         // - If guess > secret: return "Too high!"
         // - Otherwise: return empty string (user won't need hint)
+
         return "";  // Placeholder
     }
 
@@ -73,13 +77,6 @@ public class GuessingGame {
 
         System.out.println("\nI'm thinking of a number between " + MIN_NUMBER + " and " + MAX_NUMBER + "...");
 
-        // TODO: Implement single game round logic
-        // 1. Use a while loop until guess == secretNumber
-        // 2. Prompt user for input
-        // 3. Validate input - if invalid, show error and continue
-        // 4. If valid, increment attempts and get hint
-        // 5. Show hint if not correct, or show victory message if correct
-        // 6. Return total attempts
         while (guess != secretNumber) {
             System.out.print("What's your guess? ");
             String input = scanner.nextLine().trim();
@@ -111,22 +108,20 @@ public class GuessingGame {
     public static boolean askPlayAgain() {
         Scanner scanner = new Scanner(System.in);
 
-        // TODO: Implement play again logic
-        // 1. Prompt: "Play again? (yes/no): "
-        // 2. Get user response and convert to lowercase
-        // 3. Check if response is "yes", "y" -> return true
-        // 4. Check if response is "no", "n" -> return false
-        // 5. If invalid, loop and ask again
         while (true) {
             System.out.print("Play again? (yes/no): ");
             String response = scanner.nextLine().trim().toLowerCase();
 
-            if (response.equals("yes") || response.equals("y")) {
-                return true;
-            } else if (response.equals("no") || response.equals("n")) {
-                return false;
-            } else {
-                System.out.println("Please enter 'yes' or 'no'");
+            switch (response) {
+                case "yes":
+                case "y":
+                    return true;
+                case "no":
+                case "n":
+                    return false;
+                default:
+                    System.out.println("Please enter 'yes' or 'no'");
+                    break;
             }
         }
     }
@@ -143,13 +138,6 @@ public class GuessingGame {
         System.out.println("  Guess a number between 1 and 100");
         System.out.println("======================================");
 
-        // TODO: Implement main game loop
-        // 1. Use while(true) or a boolean flag for outer loop
-        // 2. Play a single round and get attempts
-        // 3. Increment gamesPlayed counter
-        // 4. Add attempts to totalAttempts
-        // 5. Ask if player wants to play again
-        // 6. If no, break and show statistics
         boolean playing = true;
         while (playing) {
             int attemptsThisRound = playSingleRound();
@@ -159,7 +147,6 @@ public class GuessingGame {
             playing = askPlayAgain();
         }
 
-        // TODO: Display final statistics
         // Show total games and average attempts
         System.out.println("\n======================================");
         System.out.println("Thanks for playing!");
