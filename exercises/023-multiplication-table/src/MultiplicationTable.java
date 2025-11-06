@@ -22,8 +22,14 @@ public class MultiplicationTable {
     }
 
     public static void main(String[] args) {
-        // TODO: Implement the main method
         // Part 1: Get user input and display single multiplication table
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        System.out.print("Enter a number to display its multiplication table: ");
+        int number = scanner.nextInt();
+        printSingleTable(number);
+
         // Part 2: Display the full 10x10 multiplication grid
+        System.out.println("\n=== Part 2: Full 10x10 Multiplication Grid ===");
+        printFullGrid();
     }
 }
