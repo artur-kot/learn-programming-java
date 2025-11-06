@@ -64,6 +64,7 @@ public class TextAnalyzer {
             // READ FILE
             String content = "";
             try {
+                // During debugging, you can use "sample.txt" as a test file
                 File file = new File(filePath);
                 StringBuilder sb;
                 try (Scanner fileScanner = new Scanner(file)) {

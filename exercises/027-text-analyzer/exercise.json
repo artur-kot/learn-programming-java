@@ -1,8 +1,8 @@
 {
   "id": "027",
   "series": 11,
-  "title": "Text Analyzer Refactor - Modular Design & Method Organization",
-  "description": "Refactor a working text analyzer application from monolithic code into well-organized methods. Learn code organization, method extraction, file I/O design, and text analysis patterns. Transform all-in-main code into modular, maintainable software with proper separation of concerns.",
+  "title": "Text Analyzer Refactor",
+  "description": "Refactor a working text analyzer application",
   "difficulty": "beginner-intermediate",
   "setup_command": "mvn clean install",
   "test_command": "mvn test",

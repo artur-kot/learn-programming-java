@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>027-calculator-refactor</artifactId>
+    <artifactId>027-text-analyzer</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>027 - Calculator Refactor</name>
-    <description>Refactor monolithic calculator code into modular, method-based design</description>
+    <name>027 - Text Analyzer Refactor</name>
+    <description>Refactor a working text analyzer application</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
