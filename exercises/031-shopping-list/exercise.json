@@ -1,0 +1,29 @@
+{
+  "id": "031",
+  "series": 13,
+  "title": "Shopping List Manager",
+  "description": "Learn ArrayList basics by building a shopping list manager with add, remove, search, and count operations.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "ArrayList",
+    "generics",
+    "list operations",
+    "add and remove",
+    "searching in lists",
+    "counting occurrences",
+    "iteration over collections"
+  ],
+  "learningObjectives": [
+    "Understand ArrayList vs regular arrays",
+    "Use generics with ArrayList<String>",
+    "Add and remove items from lists",
+    "Search for items using indexOf",
+    "Count occurrences with loops",
+    "Display list contents",
+    "Work with dynamic collections"
+  ],
+  "estimatedTime": "30-40 minutes",
+  "status": "not-started"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "038",
+  "series": 17,
+  "title": "Encapsulation",
+  "description": "Learn to protect data with private fields, getters, setters, and validation.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "encapsulation",
+    "access modifiers",
+    "private fields",
+    "getters and setters",
+    "data validation",
+    "data hiding"
+  ],
+  "learningObjectives": [
+    "Understand the principle of encapsulation",
+    "Learn to use private access modifier for fields",
+    "Create setter methods with input validation",
+    "Protect object data from invalid values",
+    "Control access to internal data through methods",
+    "Apply validation in constructors and setters"
+  ],
+  "estimatedTime": "30-40 minutes",
+  "status": "not-started"
+}

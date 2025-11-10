@@ -1,0 +1,8 @@
+{
+  "title": "Library Core Classes",
+  "description": "Learn OOP design by creating Book, Member, and Library classes with full encapsulation and relationships",
+  "test_command": "mvn test",
+  "setup_command": "mvn install",
+  "context_files": ["src/Book.java", "src/Member.java", "src/Library.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

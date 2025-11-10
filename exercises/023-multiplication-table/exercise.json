@@ -2,7 +2,7 @@
   "id": "023",
   "series": 8,
   "title": "Multiplication Table - Nested Loops",
-  "description": "Create multiplication tables using nested loops. Start with a single number's table, then progress to a complete 1-10 grid. Master nested loop logic and formatting.",
+  "description": "Learn how loops can run inside other loops to create two-dimensional patterns and grids.",
   "difficulty": "beginner",
   "setup_command": "mvn clean install",
   "test_command": "mvn test",

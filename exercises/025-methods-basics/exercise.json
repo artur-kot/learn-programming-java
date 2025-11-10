@@ -1,27 +1,27 @@
 {
   "id": "025",
   "series": 10,
-  "title": "Methods Basics - Email Validation & String Reversal",
-  "description": "Create two utility methods from scratch: email validation and string reversal. Practice method design without starter signatures.",
+  "title": "Methods Basics - Define, Parameters & Return Values",
+  "description": "Master defining simple methods, adding parameters to customize behavior, and returning values from methods.",
   "difficulty": "beginner",
   "setup_command": "mvn clean install",
   "test_command": "mvn test",
   "topics": [
-    "method design",
+    "method syntax",
     "parameters",
-    "return values",
-    "string methods",
-    "method naming",
-    "validation logic"
+    "return types",
+    "return statements",
+    "void methods",
+    "value-returning methods"
   ],
   "learningObjectives": [
-    "Design methods from scratch (signatures, names, parameters, return types)",
-    "Understand what makes a good method name",
-    "Implement validation logic for real-world data",
-    "Work with string methods (contains, charAt, length)",
-    "Handle edge cases in method implementation",
-    "Test and verify method correctness"
+    "Understand method anatomy (return type, name, parameters, body)",
+    "Create void methods that print output",
+    "Create methods with parameters to customize behavior",
+    "Implement methods that return values (int, boolean, String)",
+    "Distinguish between void and value-returning methods",
+    "Call methods from main and use returned values"
   ],
-  "estimatedTime": "20-30 minutes",
+  "estimatedTime": "25-35 minutes",
   "status": "not-started"
 }

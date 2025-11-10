@@ -1,0 +1,10 @@
+{
+  "title": "Interfaces",
+  "description": "Learn interfaces, multiple inheritance, and contract-based programming by implementing Drawable and Comparable",
+  "difficulty": "intermediate",
+  "concepts": ["interfaces", "multiple inheritance", "Comparable interface", "contract-based programming", "interface implementation"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/Drawable.java", "src/Shape.java", "src/Circle.java", "src/Rectangle.java", "src/Square.java", "test/InterfaceTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

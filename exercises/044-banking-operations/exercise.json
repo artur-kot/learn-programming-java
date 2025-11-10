@@ -1,0 +1,10 @@
+{
+  "title": "Banking Operations",
+  "description": "Learn about object references, inner classes, and composition by implementing transfers, transaction history, and interest",
+  "difficulty": "intermediate",
+  "concepts": ["object references", "inner classes", "composition", "transaction history", "advanced operations", "date handling"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/BankAccount.java", "test/BankAccountTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

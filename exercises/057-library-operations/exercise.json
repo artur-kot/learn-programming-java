@@ -1,0 +1,8 @@
+{
+  "title": "Library Operations",
+  "description": "Learn state management and business rules by implementing borrow/return system with search and overdue tracking",
+  "test_command": "mvn test",
+  "setup_command": "mvn install",
+  "context_files": ["src/Book.java", "src/Member.java", "src/Library.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

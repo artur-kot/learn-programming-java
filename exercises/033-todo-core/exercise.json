@@ -1,0 +1,8 @@
+{
+  "title": "To-Do List - Core Functionality",
+  "description": "Learn ArrayList operations, indexed output, input validation, and CRUD operations.",
+  "test_command": "mvn test",
+  "setup_command": "mvn install",
+  "context_files": ["src/TodoList.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

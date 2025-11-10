@@ -2,276 +2,257 @@
 
 ## Overview
 
-Build a complete interactive guessing game that combines multiple programming concepts: random number generation, loops, conditionals, and game flow control. This exercise progressively builds features from generating random numbers to implementing a full playable game with attempt tracking and replay functionality.
+Ever played a guessing game? Someone thinks of a number, and you try to guess it while they give you hints like "higher" or "lower". Now you'll build that game with code!
+
+This exercise introduces **while loops** and the **Random class**. Unlike for loops that count a specific number of times, while loops keep running until something happens - perfect for games where you don't know how many guesses a player will need!
 
 ## What You're Learning
 
-### Part 1: Generating Random Numbers
+### The Random Class
 
-The `Random` class generates random numbers:
+When you play games, you want unpredictability. The `Random` class generates random numbers for you.
 
+To use it, you first need to import it and create a Random object:
 ```java
 import java.util.Random;
 
-Random random = new Random();
-int secretNumber = random.nextInt(100) + 1;  // Random number 1-100
+Random rand = new Random();
 ```
 
-Breaking this down:
-- `new Random()` creates a random number generator
-- `nextInt(100)` generates a random number 0-99
-- `+ 1` shifts the range to 1-100
-
-### Part 2: While Loops for Game Logic
-
-A **while loop** runs as long as a condition is true:
-
+Then you can generate random numbers. The `nextInt(n)` method gives you a random number from 0 up to (but not including) n:
 ```java
-int attempts = 0;
-while (guess != secretNumber) {
-    // Get user input
-    // Check if guess is correct
-    // Provide feedback
-    attempts++;
+int randomNumber = rand.nextInt(100);  // Gives 0-99
+int randomNumber = rand.nextInt(100) + 1;  // Gives 1-100
+```
+
+**Why `+ 1`?** Because `nextInt(100)` gives 0-99, and adding 1 shifts the range to 1-100!
+
+### While Loops
+
+A **while loop** keeps repeating as long as a condition is true. It's perfect when you don't know exactly how many times you need to repeat something.
+
+Basic structure:
+```java
+while (condition) {
+    // Code that repeats while condition is true
 }
 ```
 
-The loop continues until the user guesses correctly.
+The loop checks the condition before each iteration. When it becomes false, the loop stops.
 
-### Part 3: Conditional Feedback
+**Think about it:** In a guessing game, you don't know if the player will guess in 1 try or 20 tries. A while loop lets you keep asking for guesses until they get it right!
 
-Give the user hints based on their guess:
+### The Challenge
 
-```java
-if (guess < secretNumber) {
-    System.out.println("Too low! Try again.");
-} else if (guess > secretNumber) {
-    System.out.println("Too high! Try again.");
-} else {
-    System.out.println("Correct! You won!");
-}
-```
-
-### Part 4: Attempt Tracking
-
-Count how many guesses the user makes:
-
-```java
-int attempts = 0;
-while (guess != secretNumber) {
-    attempts++;
-    // Game logic here
-}
-System.out.println("You took " + attempts + " attempts!");
-```
-
-### Part 5: Nested Loops for Replay
-
-Allow the user to play multiple rounds:
-
-```java
-boolean playAgain = true;
-while (playAgain) {
-    // Play one round
-    
-    // Ask to play again
-    System.out.print("Play again? (yes/no): ");
-    String response = scanner.nextLine().toLowerCase();
-    playAgain = response.equals("yes");
-}
-```
+You'll combine these concepts to create a working game where:
+- The computer picks a random number
+- The player makes guesses
+- The game gives hints ("too high" or "too low")
+- The loop continues until the player wins
+- The player can choose to play again
 
 ## Your Task
 
-Create a complete guessing game program with the following features:
+Complete the methods in `GuessingGame.java` to create a fully functional guessing game.
 
-### Part 1: Initialize Game
-- Create a `Random` object
-- Generate a secret number between 1 and 100
-- Initialize attempt counter
+### Part 1: generateRandomNumber(int min, int max)
+Create a method that returns a random integer between min and max (inclusive).
 
-### Part 2: Game Loop
-- **Prompt** the user for a guess
-- **Validate** that input is a valid number (1-100)
-- **Compare** the guess to the secret number
-- **Provide feedback**:
-  - If too low: "Your guess is too low! Try again."
-  - If too high: "Your guess is too high! Try again."
-  - If correct: "Correct! You guessed it in X attempts!"
-- **Increment** the attempt counter
-- **Continue** until guess is correct
+**Hints for this method:**
+- The range from min to max includes both endpoints
+- If min=1 and max=100, valid numbers are 1, 2, 3... 99, 100
+- Use the Random class's `nextInt()` method
+- Think about the math: how many possible numbers are there from min to max?
 
-### Part 3: End of Round Stats
-- Display how many attempts it took
-- Show a congratulatory message
+### Part 2: checkGuess(int guess, int target)
+Create a method that compares a guess to the target number and returns a hint string.
 
-### Part 4: Replay Feature
-- Ask if the user wants to play again
-- Accept "yes", "y", "no", "n" (case-insensitive)
-- Generate a new secret number and reset counters if playing again
-- Exit gracefully if not
+Should return:
+- "Too low!" if guess < target
+- "Too high!" if guess > target
+- "Correct!" if guess == target
 
-### Part 5: Overall Statistics (Bonus)
-- Track total games played
-- Display final statistics when exiting
+### Part 3: playGame()
+This is the heart of your program! Create the main game loop that:
+1. Generates a random number between 1 and 100
+2. Initializes an attempt counter to 0
+3. Uses a **while loop** that continues until the player guesses correctly
+4. Inside the loop:
+   - Prompts the player for their guess
+   - Increments the attempt counter
+   - Gets a hint using checkGuess()
+   - Displays the hint
+   - If correct, breaks out of the loop
+5. After the loop, displays how many attempts it took
+
+**This is where you practice while loops!** Think about what condition keeps the game running.
+
+### Part 4: playAgain()
+Create a method that asks if the player wants to play again.
+- Prompt the user with "Play again? (yes/no): "
+- Read their response
+- Return true if they answered "yes" or "y" (case-insensitive)
+- Return false otherwise
 
 ## Example Output
 
 ```
-======================================
-  Welcome to the Guessing Game!
-  I'm thinking of a number 1-100...
-======================================
+=====================================
+   Welcome to the Guessing Game!
+   I'm thinking of a number 1-100
+=====================================
 
-What's your guess? 50
-Your guess is too low! Try again.
+Enter your guess: 50
+Too low!
+Enter your guess: 75
+Too high!
+Enter your guess: 62
+Too low!
+Enter your guess: 68
+Too high!
+Enter your guess: 65
+Correct!
 
-What's your guess? 75
-Your guess is too high! Try again.
-
-What's your guess? 62
-Your guess is too low! Try again.
-
-What's your guess? 68
-Your guess is too high! Try again.
-
-What's your guess? 65
-Correct! You guessed it in 5 attempts!
+You guessed it in 5 attempts!
 
 Play again? (yes/no): yes
 
-======================================
-  New game! I'm thinking of a number...
-======================================
+=====================================
+   New Game! Good luck!
+=====================================
 
-What's your guess? 50
-Your guess is too low! Try again.
+Enter your guess: 30
+Too low!
+Enter your guess: 60
+Too high!
+Enter your guess: 45
+Correct!
 
-What's your guess? 75
-Your guess is too high! Try again.
-
-What's your guess? 62
-Correct! You guessed it in 3 attempts!
+You guessed it in 3 attempts!
 
 Play again? (yes/no): no
 
-======================================
-Thanks for playing! You played 2 games.
-======================================
+Thanks for playing!
 ```
 
-## Algorithm
+## Requirements
 
-1. **Setup**: Import Random, create Scanner, initialize variables
-2. **Outer loop** (while playing):
-   - Generate a new secret number (1-100)
-   - Reset attempt counter
-   - **Inner loop** (while guessing):
-     - Get user input
-     - Validate input (must be valid number, 1-100)
-     - Compare to secret number
-     - Provide appropriate feedback
-     - Increment attempts
-   - Display final round stats
-   - Ask to play again
-3. **Exit**: Display overall statistics
+Your implementation should:
+- Generate random numbers in the specified range (1-100)
+- Use a while loop for the main game logic
+- Count and display the number of attempts
+- Give accurate hints ("Too low!", "Too high!", "Correct!")
+- Handle replay functionality correctly
+- Work with Scanner for user input
 
-## Tips
+## Testing Your Solution
 
-- **Input Validation**: Use try/catch or check for valid ranges
-- **Case-insensitive comparison**: Use `.toLowerCase()` for "yes"/"no" responses
-- **Nested Loops**: Outer loop for game rounds, inner loop for guesses
-- **Readability**: Use clear separators (====) for output sections
-- **Random generation**: Remember `new Random()` creates the generator once, then call `nextInt()` on it
+Compile and run your program:
+```bash
+javac src/GuessingGame.java
+java -cp src GuessingGame
+```
 
-## Starter Code
+Run the automated tests:
+```bash
+mvn test
+```
 
+The tests verify:
+- Random number generation stays within bounds
+- The checkGuess method returns correct hints
+- The playAgain method correctly interprets yes/no responses
+
+## Hints
+
+<details>
+<summary>Hint 1: Generating Random Numbers in a Range</summary>
+
+To generate a random number from min to max (inclusive):
+
+1. Figure out how many possible values there are: `max - min + 1`
+2. Generate a random number in that range: `rand.nextInt(max - min + 1)`
+3. Shift it to start at min: `rand.nextInt(max - min + 1) + min`
+
+Example: For 1-100, that's `rand.nextInt(100) + 1`
+</details>
+
+<details>
+<summary>Hint 2: The While Loop Condition</summary>
+
+Your while loop needs to keep running until the player guesses correctly. Think about what variable tracks whether they've guessed right.
+
+One approach: Use a boolean variable like `boolean hasWon = false;`
+
+Another approach: Compare the guess directly in the condition.
+
+The loop continues WHILE they haven't won yet!
+</details>
+
+<details>
+<summary>Hint 3: Comparing Strings for Play Again</summary>
+
+When checking if the user said "yes":
+- Get their input: `String response = scanner.nextLine();`
+- Convert to lowercase: `response.toLowerCase()`
+- Compare: `response.equals("yes") || response.equals("y")`
+
+The `||` means "or" - true if either condition is true.
+</details>
+
+<details>
+<summary>Hint 4: Structure of playGame()</summary>
+
+Think about the flow:
 ```java
-import java.util.Scanner;
-import java.util.Random;
+Generate random number
+Set attempts to 0
+Set hasWon to false
 
-public class GuessingGame {
-    
-    /**
-     * Generates a random number between 1 and 100
-     */
-    public static int generateSecretNumber() {
-        // TODO: Implement random number generation
-        return 0;  // Placeholder
-    }
-    
-    /**
-     * Validates that input is a valid integer
-     */
-    public static boolean isValidInput(String input) {
-        // TODO: Implement input validation
-        return false;  // Placeholder
-    }
-    
-    /**
-     * Plays a single round of the guessing game
-     * @return the number of attempts it took to win
-     */
-    public static int playSingleRound() {
-        // TODO: Implement single game round logic
-        // - Generate secret number
-        // - Get guesses in a loop
-        // - Provide feedback
-        // - Track attempts
-        // - Return attempt count
-        return 0;  // Placeholder
-    }
-    
-    /**
-     * Asks the user if they want to play again
-     * @return true if user wants to play, false otherwise
-     */
-    public static boolean askPlayAgain() {
-        // TODO: Implement play again logic
-        // - Prompt user
-        // - Read response
-        // - Accept: yes, y, no, n (case-insensitive)
-        // - Return true/false accordingly
-        return false;  // Placeholder
-    }
-    
-    /**
-     * Main game loop - coordinates multiple rounds and statistics
-     */
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int gamesPlayed = 0;
-        int totalAttempts = 0;
-        
-        System.out.println("======================================");
-        System.out.println("  Welcome to the Guessing Game!");
-        System.out.println("  Guess a number between 1 and 100");
-        System.out.println("======================================\n");
-        
-        boolean playing = true;
-        while (playing) {
-            // TODO: Implement main game loop
-            // 1. Play a single round
-            // 2. Get attempts from that round
-            // 3. Update statistics
-            // 4. Ask if user wants to play again
-            // 5. Update playing flag
-        }
-        
-        // TODO: Display final statistics
-        System.out.println("\n======================================");
-        System.out.println("Thanks for playing!");
-        System.out.println("======================================");
-    }
+while (not won yet) {
+    Ask for guess
+    Increment attempts
+    Check if guess is correct
+    If correct:
+        Set hasWon to true
+        Display success message
+    Otherwise:
+        Display hint
 }
+
+Display total attempts
 ```
+</details>
 
-## Testing Hints
+## Reflection Questions
 
-The test file will verify:
-- Random number generation produces numbers in range 1-100
-- Input validation correctly identifies valid/invalid inputs
-- Single round logic produces correct attempt counts
-- Play again logic correctly interprets yes/no responses
-- Game statistics are tracked accurately
-- Program handles invalid inputs gracefully
+After completing this exercise, think about:
+
+1. **Loop choice**: Why is a while loop better than a for loop for this game? What would make a for loop awkward here?
+
+2. **Random testing**: How would you test that your random number generator works correctly? Can you prove it's truly random?
+
+3. **Improving hints**: How could you make the hints even more helpful? What if you told the player when they're "very close"?
+
+4. **Edge cases**: What happens if the player enters text instead of a number? How could you handle that gracefully?
+
+5. **Strategy**: If the range is 1-100, what's the smartest guessing strategy? Can you guarantee winning in a certain number of guesses?
+
+## Next Steps
+
+Excellent work mastering while loops and random numbers! These are fundamental tools for creating interactive programs:
+- Games with unpredictable elements
+- Programs that run until a condition is met
+- User interfaces that wait for specific input
+- Simulations and randomized algorithms
+
+Up next, you'll learn about methods and how to organize your code into reusable building blocks!
+
+## Read More
+
+Want to dive deeper? Check out these resources:
+
+- [Oracle Java Tutorials - Random Numbers](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
+- [Oracle Java Tutorials - The while Statement](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html)
+- [GeeksforGeeks - While Loop in Java](https://www.geeksforgeeks.org/java-while-loop-with-examples/)
+- [Game Development Basics](https://www.gamedesigning.org/learn/game-logic/)

@@ -1,160 +1,93 @@
-
 import java.util.Scanner;
 import java.util.Random;
 
 public class GuessingGame {
 
-    private static final int MIN_NUMBER = 1;
-    private static final int MAX_NUMBER = 100;
+    // Scanner is shared across methods
+    private static Scanner scanner = new Scanner(System.in);
+    private static Random rand = new Random();
 
     /**
-     * Generates a random number between 1 and 100
+     * Generates a random number between min and max (inclusive).
      *
-     * @return a random integer in range [1, 100]
+     * @param min The minimum value (inclusive)
+     * @param max The maximum value (inclusive)
+     * @return A random integer between min and max
      */
-    public static int generateSecretNumber() {
-        // TODO: Implement random number generation
-        // Use Random class to generate number between 1 and 100
-        // Hint: new Random().nextInt() with correct parameters
-
-        return 0;  // Placeholder
+    public static int generateRandomNumber(int min, int max) {
+        // TODO: Generate and return a random number between min and max
+        // Hint: How many possible values are there from min to max?
+        // Hint: Use rand.nextInt() and add the appropriate offset
+        return 0;  // Placeholder - replace this
     }
 
     /**
-     * Validates that input is a valid integer in the correct range
+     * Compares a guess to the target and returns a hint.
      *
-     * @param input the user input string
-     * @return true if valid number between 1-100, false otherwise
+     * @param guess The player's guess
+     * @param target The target number to guess
+     * @return "Too low!" if guess < target, "Too high!" if guess > target, "Correct!" if equal
      */
-    public static boolean isValidInput(String input) {
-        // TODO: Implement input validation
-        // - Try to parse as integer
-        // - Check if it's in range 1-100
-        // - Return true only if both conditions pass
-        // - Catch NumberFormatException and return false
-        // - Whitespaces should be trimmed before parsing
-
-        return false; // Placeholder
+    public static String checkGuess(int guess, int target) {
+        // TODO: Compare guess and target, return appropriate hint
+        // Return "Too low!" if guess is less than target
+        // Return "Too high!" if guess is greater than target
+        // Return "Correct!" if they match
+        return "";  // Placeholder - replace this
     }
 
     /**
-     * Parses a string to integer (assumes valid input - call isValidInput
-     * first)
-     *
-     * @param input the user input string
-     * @return the parsed integer
+     * Plays one round of the guessing game.
+     * The player tries to guess a random number between 1 and 100.
      */
-    public static int parseGuess(String input) {
-        return Integer.parseInt(input);
+    public static void playGame() {
+        // TODO: Implement the main game loop
+        // 1. Generate a random number between 1 and 100
+        // 2. Initialize an attempts counter
+        // 3. Create a while loop that continues until the player guesses correctly
+        // 4. Inside the loop:
+        //    - Prompt for a guess
+        //    - Increment attempts
+        //    - Get hint from checkGuess()
+        //    - Display the hint
+        //    - If correct, break from the loop
+        // 5. After the loop, display how many attempts it took
+
+        System.out.println("\nI'm thinking of a number between 1 and 100...");
+
+        // Your code here
     }
 
     /**
-     * Provides feedback on how the guess compares to secret number
+     * Asks the player if they want to play again.
      *
-     * @param guess the user's guess
-     * @param secret the secret number
-     * @return feedback message
+     * @return true if the player wants to play again, false otherwise
      */
-    public static String getHint(int guess, int secret) {
-        // TODO: Implement hint logic
-        // - If guess < secret: return "Too low!"
-        // - If guess > secret: return "Too high!"
-        // - Otherwise: return empty string (user won't need hint)
-
-        return "";  // Placeholder
+    public static boolean playAgain() {
+        // TODO: Ask the user if they want to play again
+        // Prompt: "Play again? (yes/no): "
+        // Accept "yes" or "y" (case-insensitive) as true
+        // Everything else returns false
+        return false;  // Placeholder - replace this
     }
 
     /**
-     * Plays a single round of the guessing game
-     *
-     * @return the number of attempts it took to guess correctly
-     */
-    public static int playSingleRound() {
-        Scanner scanner = new Scanner(System.in);
-        int secretNumber = generateSecretNumber();
-        int attempts = 0;
-        int guess = -1;
-
-        System.out.println("\nI'm thinking of a number between " + MIN_NUMBER + " and " + MAX_NUMBER + "...");
-
-        while (guess != secretNumber) {
-            System.out.print("What's your guess? ");
-            String input = scanner.nextLine().trim();
-
-            if (!isValidInput(input)) {
-                System.out.println("Invalid input! Please enter a number between " + MIN_NUMBER + " and " + MAX_NUMBER);
-                continue;
-            }
-
-            guess = parseGuess(input);
-            attempts++;
-
-            if (guess == secretNumber) {
-                System.out.println("Correct! You guessed it in " + attempts + " attempt" + (attempts == 1 ? "" : "s") + "!");
-            } else {
-                String hint = getHint(guess, secretNumber);
-                System.out.println(hint);
-            }
-        }
-
-        return attempts;
-    }
-
-    /**
-     * Asks the user if they want to play again
-     *
-     * @return true if user wants to play, false otherwise
-     */
-    public static boolean askPlayAgain() {
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.print("Play again? (yes/no): ");
-            String response = scanner.nextLine().trim().toLowerCase();
-
-            switch (response) {
-                case "yes":
-                case "y":
-                    return true;
-                case "no":
-                case "n":
-                    return false;
-                default:
-                    System.out.println("Please enter 'yes' or 'no'");
-                    break;
-            }
-        }
-    }
-
-    /**
-     * Main game loop - coordinates multiple rounds and statistics
+     * Main method - starts the game and handles replay loop.
      */
     public static void main(String[] args) {
-        int gamesPlayed = 0;
-        int totalAttempts = 0;
+        System.out.println("=====================================");
+        System.out.println("   Welcome to the Guessing Game!");
+        System.out.println("   I'm thinking of a number 1-100");
+        System.out.println("=====================================");
 
-        System.out.println("======================================");
-        System.out.println("  Welcome to the Guessing Game!");
-        System.out.println("  Guess a number between 1 and 100");
-        System.out.println("======================================");
+        // TODO: Create a loop that:
+        // 1. Plays one game round
+        // 2. Asks if the player wants to play again
+        // 3. Continues if they say yes, exits if they say no
 
-        boolean playing = true;
-        while (playing) {
-            int attemptsThisRound = playSingleRound();
-            gamesPlayed++;
-            totalAttempts += attemptsThisRound;
+        // Your code here
 
-            playing = askPlayAgain();
-        }
-
-        // Show total games and average attempts
-        System.out.println("\n======================================");
-        System.out.println("Thanks for playing!");
-        System.out.println("Games played: " + gamesPlayed);
-        if (gamesPlayed > 0) {
-            double avgAttempts = (double) totalAttempts / gamesPlayed;
-            System.out.println("Average attempts per game: " + String.format("%.2f", avgAttempts));
-        }
-        System.out.println("======================================");
+        System.out.println("\nThanks for playing!");
+        scanner.close();
     }
 }

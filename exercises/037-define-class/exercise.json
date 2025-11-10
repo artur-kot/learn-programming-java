@@ -1,0 +1,27 @@
+{
+  "id": "037",
+  "series": 17,
+  "title": "Define a Class",
+  "description": "Learn to create classes with fields, constructors, and the this keyword.",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "classes",
+    "fields",
+    "constructors",
+    "this keyword",
+    "objects",
+    "instance variables"
+  ],
+  "learningObjectives": [
+    "Understand what classes and objects are",
+    "Learn to define fields (instance variables)",
+    "Create constructors to initialize objects",
+    "Use the 'this' keyword to reference current object",
+    "Implement getter methods",
+    "Create and use multiple independent objects"
+  ],
+  "estimatedTime": "30-40 minutes",
+  "status": "not-started"
+}

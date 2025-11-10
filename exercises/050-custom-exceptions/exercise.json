@@ -1,0 +1,16 @@
+{
+  "title": "Custom Exceptions",
+  "description": "Create custom exception classes, use throw/throws, build exception hierarchy for banking system",
+  "difficulty": "intermediate",
+  "concepts": ["custom exceptions", "throw vs throws", "checked exceptions", "exception hierarchy", "business logic validation", "Exception class extension"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": [
+    "src/InsufficientFundsException.java",
+    "src/InvalidAccountException.java",
+    "src/TransactionFailedException.java",
+    "src/BankAccount.java",
+    "test/CustomExceptionsTest.java"
+  ],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

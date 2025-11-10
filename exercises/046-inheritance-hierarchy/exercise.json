@@ -1,0 +1,10 @@
+{
+  "title": "Inheritance Hierarchy",
+  "description": "Learn inheritance hierarchy, constructor chaining with super(), and code reuse through IS-A relationships",
+  "difficulty": "intermediate",
+  "concepts": ["inheritance hierarchy", "constructor chaining", "super keyword", "code reuse", "IS-A relationship"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/Shape.java", "src/Circle.java", "src/Rectangle.java", "src/Square.java", "test/InheritanceTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

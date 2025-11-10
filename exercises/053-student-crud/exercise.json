@@ -1,0 +1,10 @@
+{
+  "title": "Student Class & CRUD Operations",
+  "description": "Learn OOP modeling and CRUD operations by creating a student management system with collections",
+  "difficulty": "intermediate",
+  "concepts": ["OOP", "classes", "encapsulation", "CRUD operations", "ArrayList", "object collections"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/Student.java", "src/StudentManager.java", "test/StudentManagerTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

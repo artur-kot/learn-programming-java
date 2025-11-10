@@ -1,0 +1,8 @@
+{
+  "title": "Complete Library System",
+  "description": "Learn file I/O and menu-driven design by creating a complete library management application with persistence and reporting",
+  "test_command": "mvn test",
+  "setup_command": "mvn install",
+  "context_files": ["src/Book.java", "src/Member.java", "src/Library.java", "src/LibraryApp.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

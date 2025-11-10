@@ -1,98 +1,99 @@
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GuessingGameTest {
 
-    private ByteArrayOutputStream outContent;
-    private PrintStream originalOut;
-
-    @BeforeEach
-    public void setUp() {
-        outContent = new ByteArrayOutputStream();
-        originalOut = System.out;
-        System.setOut(new PrintStream(outContent));
-    }
-
     @Test
-    public void testGenerateSecretNumber() {
-        // Test that random number is in valid range
-        for (int i = 0; i < 10; i++) {
-            int secret = GuessingGame.generateSecretNumber();
-            assertTrue(secret >= 1 && secret <= 100,
-                    "Secret number should be between 1 and 100, got: " + secret);
+    public void testGenerateRandomNumberInRange() {
+        // Test that random numbers are within the specified range
+        for (int i = 0; i < 100; i++) {
+            int random = GuessingGame.generateRandomNumber(1, 100);
+            assertTrue(random >= 1 && random <= 100,
+                    "Random number should be between 1 and 100, got: " + random);
         }
     }
 
     @Test
-    public void testIsValidInputWithValidNumbers() {
-        assertTrue(GuessingGame.isValidInput("1"), "Should accept 1");
-        assertTrue(GuessingGame.isValidInput("50"), "Should accept 50");
-        assertTrue(GuessingGame.isValidInput("100"), "Should accept 100");
-        assertTrue(GuessingGame.isValidInput("75"), "Should accept 75");
+    public void testGenerateRandomNumberSmallRange() {
+        // Test with a smaller range
+        for (int i = 0; i < 50; i++) {
+            int random = GuessingGame.generateRandomNumber(5, 10);
+            assertTrue(random >= 5 && random <= 10,
+                    "Random number should be between 5 and 10, got: " + random);
+        }
     }
 
     @Test
-    public void testIsValidInputWithInvalidNumbers() {
-        assertFalse(GuessingGame.isValidInput("0"), "Should reject 0");
-        assertFalse(GuessingGame.isValidInput("101"), "Should reject 101");
-        assertFalse(GuessingGame.isValidInput("-1"), "Should reject negative");
-        assertFalse(GuessingGame.isValidInput("1000"), "Should reject out of range");
+    public void testGenerateRandomNumberSingleValue() {
+        // When min equals max, should always return that value
+        int random = GuessingGame.generateRandomNumber(42, 42);
+        assertEquals(42, random,
+                "When min equals max, should return that value");
     }
 
     @Test
-    public void testIsValidInputWithNonNumbers() {
-        assertFalse(GuessingGame.isValidInput("abc"), "Should reject non-numeric");
-        assertFalse(GuessingGame.isValidInput(""), "Should reject empty string");
-        assertFalse(GuessingGame.isValidInput("50.5"), "Should reject decimal");
-        assertFalse(GuessingGame.isValidInput("fifty"), "Should reject text");
+    public void testCheckGuessTooLow() {
+        String hint = GuessingGame.checkGuess(25, 50);
+        assertEquals("Too low!", hint,
+                "Should return 'Too low!' when guess is less than target");
     }
 
     @Test
-    public void testGetHintTooLow() {
-        String hint = GuessingGame.getHint(25, 50);
-        assertTrue(hint.toLowerCase().contains("low"),
-                "Should indicate guess is too low");
+    public void testCheckGuessTooHigh() {
+        String hint = GuessingGame.checkGuess(75, 50);
+        assertEquals("Too high!", hint,
+                "Should return 'Too high!' when guess is greater than target");
     }
 
     @Test
-    public void testGetHintTooHigh() {
-        String hint = GuessingGame.getHint(75, 50);
-        assertTrue(hint.toLowerCase().contains("high"),
-                "Should indicate guess is too high");
+    public void testCheckGuessCorrect() {
+        String hint = GuessingGame.checkGuess(50, 50);
+        assertEquals("Correct!", hint,
+                "Should return 'Correct!' when guess equals target");
     }
 
     @Test
-    public void testParseGuess() {
-        assertEquals(42, GuessingGame.parseGuess("42"),
-                "Should correctly parse valid input");
-        assertEquals(1, GuessingGame.parseGuess("1"),
-                "Should correctly parse 1");
-        assertEquals(100, GuessingGame.parseGuess("100"),
-                "Should correctly parse 100");
-    }
-
-    @Test
-    public void testBoundaryValues() {
+    public void testCheckGuessEdgeCases() {
         // Test edge cases
-        assertTrue(GuessingGame.isValidInput("1"), "Should accept minimum 1");
-        assertTrue(GuessingGame.isValidInput("100"), "Should accept maximum 100");
-        assertFalse(GuessingGame.isValidInput("0"), "Should reject 0");
-        assertFalse(GuessingGame.isValidInput("101"), "Should reject 101");
+        assertEquals("Too low!", GuessingGame.checkGuess(1, 100),
+                "Minimum guess should be too low");
+        assertEquals("Too high!", GuessingGame.checkGuess(100, 1),
+                "Maximum guess should be too high");
+        assertEquals("Correct!", GuessingGame.checkGuess(1, 1),
+                "Matching edge values should be correct");
     }
 
     @Test
-    public void testInputValidationWithWhitespace() {
-        // Assuming implementation trims input
-        assertTrue(GuessingGame.isValidInput("  50  "),
-                "Should handle whitespace");
-        assertTrue(GuessingGame.isValidInput("1"),
-                "Should accept 1");
+    public void testCheckGuessConsistency() {
+        // Test consistency with multiple checks
+        int target = 42;
+
+        assertEquals("Too low!", GuessingGame.checkGuess(30, target));
+        assertEquals("Too low!", GuessingGame.checkGuess(41, target));
+        assertEquals("Correct!", GuessingGame.checkGuess(42, target));
+        assertEquals("Too high!", GuessingGame.checkGuess(43, target));
+        assertEquals("Too high!", GuessingGame.checkGuess(50, target));
+    }
+
+    @Test
+    public void testRandomNumberDistribution() {
+        // Ensure random numbers cover the full range over many iterations
+        boolean[] seen = new boolean[11]; // For range 1-10
+
+        for (int i = 0; i < 200; i++) {
+            int random = GuessingGame.generateRandomNumber(1, 10);
+            if (random >= 1 && random <= 10) {
+                seen[random] = true;
+            }
+        }
+
+        // Check that we've seen at least 80% of possible values
+        int count = 0;
+        for (int i = 1; i <= 10; i++) {
+            if (seen[i]) count++;
+        }
+
+        assertTrue(count >= 8,
+                "Random generator should produce varied numbers. Saw " + count + " out of 10 possible values");
     }
 }

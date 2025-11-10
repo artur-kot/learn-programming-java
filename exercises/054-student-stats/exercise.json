@@ -1,0 +1,10 @@
+{
+  "title": "Statistics & Reporting",
+  "description": "Learn data aggregation, sorting, and reporting by calculating student statistics and generating reports",
+  "difficulty": "intermediate",
+  "concepts": ["data aggregation", "sorting", "comparisons", "algorithms", "reporting", "statistics"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/StudentStats.java", "src/Student.java", "src/StudentManager.java", "test/StudentStatsTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

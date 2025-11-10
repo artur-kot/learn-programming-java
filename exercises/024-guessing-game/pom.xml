@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>024 - Guessing Game</name>
-    <description>Interactive guessing game with random numbers and game flow control</description>
+    <description>Build an interactive guessing game using random numbers and while loops</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

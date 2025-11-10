@@ -1,0 +1,27 @@
+{
+  "id": "036",
+  "series": 16,
+  "title": "Expense Tracker - Analytics",
+  "description": "Learn to analyze expense data with filtering, comparisons, and reporting",
+  "difficulty": "beginner",
+  "setup_command": "mvn clean install",
+  "test_command": "mvn test",
+  "topics": [
+    "data filtering",
+    "comparisons",
+    "min/max algorithms",
+    "calculations",
+    "conditional logic",
+    "reporting"
+  ],
+  "learningObjectives": [
+    "Filter collections based on criteria",
+    "Find minimum and maximum values in data",
+    "Calculate averages from numeric data",
+    "Build conditional logic for data analysis",
+    "Generate formatted reports from data",
+    "Apply comparison algorithms to real-world problems"
+  ],
+  "estimatedTime": "45-55 minutes",
+  "status": "not-started"
+}

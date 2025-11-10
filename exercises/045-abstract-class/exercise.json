@@ -1,0 +1,10 @@
+{
+  "title": "Abstract Base Class",
+  "description": "Learn abstract classes, inheritance, and method overriding by creating Shape hierarchy",
+  "difficulty": "intermediate",
+  "concepts": ["abstract classes", "inheritance", "method overriding", "polymorphism", "abstract methods"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/Shape.java", "src/Circle.java", "src/Rectangle.java", "test/ShapeTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

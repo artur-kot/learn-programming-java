@@ -1,0 +1,10 @@
+{
+  "title": "Multiple Accounts Management",
+  "description": "Learn about static members, collections of objects, and class-level data by managing multiple bank accounts",
+  "difficulty": "intermediate",
+  "concepts": ["static members", "static variables", "static methods", "collections of objects", "ArrayList", "class variables", "auto-increment"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/BankAccount.java", "src/BankAccountManager.java", "test/BankAccountTest.java", "test/BankAccountManagerTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}

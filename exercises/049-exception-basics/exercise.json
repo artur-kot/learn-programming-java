@@ -1,0 +1,10 @@
+{
+  "title": "Exception Basics",
+  "description": "Handle multiple exception types with try/catch/finally blocks, division by zero, input validation",
+  "difficulty": "intermediate",
+  "concepts": ["try/catch/finally blocks", "exception types", "ArithmeticException", "NumberFormatException", "IOException", "exception control flow", "try-with-resources"],
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": ["src/ExceptionBasics.java", "test/ExceptionBasicsTest.java"],
+  "context_patterns": ["src/**/*.java", "test/**/*.java"]
+}
