@@ -1,5 +1,5 @@
 {
-  "id": "030",
+  "id": "029",
   "series": 13,
   "title": "String Manipulation Toolkit",
   "description": "Work with arrays of strings to count characters, find longest/shortest words, and join strings with separators.",

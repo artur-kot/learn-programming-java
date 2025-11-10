@@ -1,4 +1,4 @@
-# Exercise 031: String Transformation
+# Exercise 030: String Transformation
 
 ## Overview
 
@@ -149,7 +149,7 @@ System.out.println(transformer.countVowels("programming")); // 3
 
 Compile and run your code:
 ```bash
-cd exercises/031-string-transformation
+cd exercises/030-string-transformation
 javac src/StringTransformation.java
 ```
 

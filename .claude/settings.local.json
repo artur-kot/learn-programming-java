@@ -7,7 +7,11 @@
       "Bash(javac:*)",
       "Bash(java:*)",
       "Bash(dir:*)",
-      "Bash(mvn clean:*)"
+      "Bash(mvn clean:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(robocopy:*)",
+      "Bash(git mv:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,4 +1,4 @@
-# Exercise 030: String Manipulation Toolkit
+# Exercise 029: String Manipulation Toolkit
 
 ## Overview
 
@@ -120,7 +120,7 @@ System.out.println(toolkit.concatenateWords(colors, "-"));   // "red-green-blue"
 
 Compile and run your code:
 ```bash
-cd exercises/030-string-toolkit
+cd exercises/029-string-toolkit
 javac src/StringToolkit.java
 ```
 
