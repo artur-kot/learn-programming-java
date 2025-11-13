@@ -32,14 +32,21 @@ public class QuizChecker {
 
     // Poprawne odpowiedzi
     private static final List<Question> QUESTIONS = Arrays.asList(
-            new Question(1, QuestionType.SINGLE_CHOICE, "B"),
-            new Question(2, QuestionType.SINGLE_CHOICE, "C"),
+            new Question(1, QuestionType.SINGLE_CHOICE, "A"),
+            new Question(2, QuestionType.TEXT, "instancja", "konkretna instancja", "obiekt", "egzemplarz"),
             new Question(3, QuestionType.MULTIPLE_CHOICE, "A", "C"),
-            new Question(4, QuestionType.TEXT, "ciasto", "upieczone ciasto", "konkretne ciasto"),
-            new Question(5, QuestionType.TEXT, "właściwości", "właściwosci", "pola", "atrybuty", "cechy", "dane"),
-            new Question(6, QuestionType.TEXT, "metody", "funkcje", "akcje", "zachowania"),
-            new Question(7, QuestionType.SINGLE_CHOICE, "B"),
-            new Question(8, QuestionType.SINGLE_CHOICE, "A")
+            new Question(4, QuestionType.SINGLE_CHOICE, "C"),
+            new Question(5, QuestionType.SINGLE_CHOICE, "B"),
+            new Question(6, QuestionType.TEXT, "enkapsulacja dziedziczenie polimorfizm", "enkapsulacja polimorfizm dziedziczenie", "dziedziczenie enkapsulacja polimorfizm", "dziedziczenie polimorfizm enkapsulacja", "polimorfizm enkapsulacja dziedziczenie", "polimorfizm dziedziczenie enkapsulacja"),
+            new Question(7, QuestionType.SINGLE_CHOICE, "A"),
+            new Question(8, QuestionType.SINGLE_CHOICE, "B"),
+            new Question(9, QuestionType.TEXT, "polimorfizm", "polimorfizmu"),
+            new Question(10, QuestionType.SINGLE_CHOICE, "A"),
+            new Question(11, QuestionType.SINGLE_CHOICE, "A"),
+            new Question(12, QuestionType.MULTIPLE_CHOICE, "A", "C", "D"),
+            new Question(13, QuestionType.SINGLE_CHOICE, "B"),
+            new Question(14, QuestionType.TEXT, "kolor", "marka", "prędkość", "predkosc", "prędkość maksymalna", "rocznik", "model", "silnik"),
+            new Question(15, QuestionType.TEXT, "jedź", "jedz", "zatrzymaj", "przyspiesz", "hamuj", "skręć", "skrec", "zaparkuj")
     );
 
     /**

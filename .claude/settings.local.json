@@ -11,7 +11,8 @@
       "Bash(rm:*)",
       "Bash(mv:*)",
       "Bash(robocopy:*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []

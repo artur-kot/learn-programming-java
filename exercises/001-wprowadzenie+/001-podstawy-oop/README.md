@@ -89,7 +89,7 @@ Po wypełnieniu zapisz ten plik i uruchom: `mvn test`
 Co to jest **klasa** w programowaniu obiektowym?
 
 - [ ] A) Konkretny obiekt z danymi
-- [ ] B) Szablon/wzorzec do tworzenia obiektów
+- [x] B) Szablon/wzorzec do tworzenia obiektów
 - [ ] C) Funkcja która wykonuje obliczenia
 - [ ] D) Zmienna przechowująca wartość
 
@@ -100,7 +100,7 @@ Co to jest **obiekt**?
 
 - [ ] A) Kod źródłowy programu
 - [ ] B) Funkcja w programie
-- [ ] C) Konkretna instancja stworzona na podstawie klasy
+- [x] C) Konkretna instancja stworzona na podstawie klasy
 - [ ] D) Nazwa zmiennej
 
 ---
@@ -108,9 +108,9 @@ Co to jest **obiekt**?
 ### Pytanie 3
 Które z poniższych są elementami obiektu? *(zaznacz wszystkie poprawne)*
 
-- [ ] A) Właściwości (dane)
+- [x] A) Właściwości (dane)
 - [ ] B) Pliki na dysku
-- [ ] C) Metody (funkcje)
+- [x] C) Metody (funkcje)
 - [ ] D) Komentarze w kodzie
 
 ---
@@ -118,21 +118,21 @@ Które z poniższych są elementami obiektu? *(zaznacz wszystkie poprawne)*
 ### Pytanie 4
 Używając analogii: jeśli klasa to "przepis na ciasto", to czym jest obiekt?
 
-Odpowiedź:
+Odpowiedź: ciasto
 
 ---
 
 ### Pytanie 5
 Samochód ma kolor, markę i prędkość maksymalną. Jak nazywamy te elementy w OOP?
 
-Odpowiedź:
+Odpowiedź: właściwości
 
 ---
 
 ### Pytanie 6
 Samochód może jechać, zatrzymać się i przyspieszyć. Jak nazywamy te elementy w OOP?
 
-Odpowiedź:
+Odpowiedź: metody
 
 ---
 
@@ -140,7 +140,7 @@ Odpowiedź:
 Która analogia najlepiej opisuje relację klasa-obiekt?
 
 - [ ] A) Książka - strona
-- [ ] B) Przepis - upieczone ciasto
+- [x] B) Przepis - upieczone ciasto
 - [ ] C) Komputer - klawiatura
 - [ ] D) Nauczyciel - uczeń
 
@@ -149,7 +149,7 @@ Która analogia najlepiej opisuje relację klasa-obiekt?
 ### Pytanie 8
 Czy możemy stworzyć wiele obiektów z jednej klasy?
 
-- [ ] A) Tak
+- [x] A) Tak
 - [ ] B) Nie
 
 ---

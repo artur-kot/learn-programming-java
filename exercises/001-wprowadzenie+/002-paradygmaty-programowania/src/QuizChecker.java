@@ -32,14 +32,16 @@ public class QuizChecker {
 
     // Poprawne odpowiedzi
     private static final List<Question> QUESTIONS = Arrays.asList(
-            new Question(1, QuestionType.SINGLE_CHOICE, "B"),
-            new Question(2, QuestionType.SINGLE_CHOICE, "C"),
+            new Question(1, QuestionType.SINGLE_CHOICE, "C"),
+            new Question(2, QuestionType.SINGLE_CHOICE, "B"),
             new Question(3, QuestionType.MULTIPLE_CHOICE, "A", "C"),
-            new Question(4, QuestionType.TEXT, "ciasto", "upieczone ciasto", "konkretne ciasto"),
-            new Question(5, QuestionType.TEXT, "właściwości", "właściwosci", "pola", "atrybuty", "cechy", "dane"),
-            new Question(6, QuestionType.TEXT, "metody", "funkcje", "akcje", "zachowania"),
-            new Question(7, QuestionType.SINGLE_CHOICE, "B"),
-            new Question(8, QuestionType.SINGLE_CHOICE, "A")
+            new Question(4, QuestionType.TEXT, "matematyka", "matematyczne funkcje", "funkcje matematyczne", "matematycznych funkcji"),
+            new Question(5, QuestionType.SINGLE_CHOICE, "B"),
+            new Question(6, QuestionType.TEXT, "proceduralny", "programowanie proceduralne", "proceduralnym"),
+            new Question(7, QuestionType.SINGLE_CHOICE, "D"),
+            new Question(8, QuestionType.SINGLE_CHOICE, "B"),
+            new Question(9, QuestionType.TEXT, "obiektowy", "oop", "programowanie obiektowe", "obiektowym"),
+            new Question(10, QuestionType.MULTIPLE_CHOICE, "A", "B", "C")
     );
 
     /**
