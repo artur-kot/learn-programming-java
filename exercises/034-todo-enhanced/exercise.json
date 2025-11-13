@@ -1,8 +1,0 @@
-{
-  "title": "To-Do List - Enhanced Features",
-  "description": "Learn conditional updates, status management, filtering, and data presentation.",
-  "test_command": "mvn test",
-  "setup_command": "mvn install",
-  "context_files": ["src/TodoEnhanced.java"],
-  "context_patterns": ["src/**/*.java", "test/**/*.java"]
-}

@@ -1,0 +1,14 @@
+{
+  "title": "Podstawy programowania obiektowego",
+  "description": "Quiz teoretyczny o podstawach OOP: klasy, obiekty, właściwości i metody",
+  "type": "quiz",
+  "test_command": "mvn test",
+  "setup_command": "mvn clean install",
+  "context_files": [
+    "README.md"
+  ],
+  "context_patterns": [
+    "src/**/*.java",
+    "test/**/*.java"
+  ]
+}

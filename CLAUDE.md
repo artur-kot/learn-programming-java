@@ -19,6 +19,15 @@ learn-programming-java/
 ├── Roadmap.md           # Exercise roadmap showing progression and completion status
 ├── progress.db          # SQLite database tracking user progress
 └── exercises/
+  └──XXX-folder+        # folders are with "+" at the end
+    └── XXX-exercise-name/
+        ├── src/
+        │   └── XXX-exercise-name.java       # Exercise implementation file
+        ├── test/
+        │   └── XXX-exercise-nameTest.java  # Test file using JUnit
+        ├── README.md                        # Exercise instructions
+        ├── pom.xml                          # Maven configuration
+        └── exercise.json                    # Optional - override default exercise metadata
   └── XXX-exercise-name/
     ├── src/
     │   └── XXX-exercise-name.java       # Exercise implementation file
